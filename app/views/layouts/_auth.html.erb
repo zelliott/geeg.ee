@@ -1,0 +1,13 @@
+<div id="auth">
+    <div id="auth-logo">
+        <%= image_tag "gg_logo.png" %>
+    </div>
+    <div id="auth-form">
+        <%= form_for(:session, url: sessions_path) do |f| %>
+            <%= f.text_field :email, :placeholder => "Email" %>
+            <%= f.password_field :password, :placeholder => "Password" %>
+            <%= f.submit "Sign in" %>
+        <% end %>
+    </div>
+    
+</div>

@@ -1,0 +1,51 @@
+@import 'vars';
+
+/* HEADER
+   ----------------------------- */
+
+#logo {
+    float: left;
+    margin-top: 15px;
+}
+
+#header-search {
+    float: left;
+    height: inherit;
+    #search {
+        margin-left: 60px;
+        height: 40px;
+        padding: 10px 20px;
+        width: 400px;
+        border-left: 1px solid $light-gray-bdr;
+        border-right: 1px solid $light-gray-bdr;
+        background-color: #eee;
+        font-size: 18px;
+        color: #999;
+    }
+}
+
+#header-right-nav {
+    float: right;
+    height: inherit;
+    ul#header-nav-menu {
+        @extend #header-right-nav;
+        li {
+            @extend #header-right-nav;
+            vertical-align: middle;
+            text-align: right;
+            a {
+                @extend #header-right-nav;
+                color: #111;
+                font-weight: bold;
+                font-size: 15px; 
+                line-height: $header-height;
+                .caret {
+                    margin-left: 100px;
+                }
+            }
+            ul#header-dropdown-menu {
+                display: none;
+            }
+        }
+    }
+}
