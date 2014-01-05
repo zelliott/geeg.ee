@@ -2,7 +2,11 @@
    ----------------------------- */
 
 $font-stack: Helvetica Neue, Helvetica, sans-serif;
+$container-width: 960px;
 $header-height: 60px;
+$profile-width: 670px;
+$sidebar-width: $container-width - $profile-width - 30;
+$top-profile-height: 120px;
 
 /* COLORS */
 $bkg: #111;

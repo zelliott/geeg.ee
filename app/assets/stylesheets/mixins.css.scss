@@ -1,0 +1,24 @@
+/* GLOBAL MIXINS
+   ----------------------------- */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin btn($btn-height, $btn-width, $btn-background-color, $btn-border-color, $btn-font-color, $font-size) {
+    line-height: $btn-height;
+    vertical-align: middle;
+    text-align: center;
+    height: $btn-height;
+    width: $btn-width;
+    background-color: $btn-background-color;
+    border-bottom: 1px solid $btn-border-color;
+    color: $btn-font-color;
+    font-size: $font-size;
+    font-weight: bold;
+    @include border-radius(0px);
+}

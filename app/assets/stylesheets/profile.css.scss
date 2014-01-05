@@ -1,0 +1,136 @@
+@import 'vars';
+@import 'mixins';
+
+/* PLAYER PROFILE
+   ----------------------------- */
+
+#main {
+    float: left;
+    width: $profile-width;
+    margin-right: 30px;
+    #quick-info {
+        float: left;
+        width: inherit;
+        height: $top-profile-height;
+        color: #fff;
+        > div {
+            float: left;
+            > div {
+                margin: 0 0 5px 30px;
+                h1 {
+                    display: inline-table;
+                }
+                .verified {
+                    display: inline-table;
+                    margin: -6px 0 0 20px;
+                    padding: 5px 10px;
+                    background-color: #00C9E6;
+                    font-weight: bold;
+                    @include border-radius(20px);
+                }
+                h2 {
+                    color: #999;
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+                .status {
+                    /* No team flag or icon yet */
+                }
+            }
+        } 
+    }
+    #main-info {
+        float: left;
+        width: inherit;
+        margin: 60px 0 0 0;
+        .main-block {
+            width: inherit;
+            background-color: #fff;
+            margin-bottom: 30px;
+            i {
+                margin-right: 12px;
+            }
+            div {
+                display: inline-table;
+                position: relative;
+                width: $profile-width / 2;
+                ul {
+                    li {
+                        padding: 12px;
+                        background-color: #f7f7f7;
+                        border-bottom: 1px solid $light-gray-bdr;
+                        b {
+                            color: #333;
+                        }
+                        span {
+                            color: #333;
+                            float: right;
+                        }
+                    }
+                }
+                p {
+                    color: #666;
+                    padding: 12px;
+                    font-style: italic;
+                }
+            }
+            .main-block-left {
+                border-right: 1px solid $light-gray-bdr;
+            }
+            .main-block-right {
+                margin-top: -3px;
+                margin-left: -5px;
+            }
+        }
+    }
+}
+
+#sidebar {    
+    float: left;
+    width: $sidebar-width;
+    color: #fff;
+    #contact-region {
+        width: inherit;
+        height: $top-profile-height;
+        
+    }
+    #sidebar-info {
+        margin-top: 60px;
+        width: inherit;
+        .sidebar-block {
+            display: block;
+            margin-bottom: 30px;
+            h5 {
+                float: left;
+                width: 100%;
+            }
+        }
+        #related-players {
+            float: left;
+            ul {
+                float: left;
+                li {
+                    float: left;
+                    width: $sidebar-width;
+                    margin: 0 0 20px 0;
+                    img, a, small {
+                        float: left;
+                    }
+                    img {
+                        margin: 0 10px 0 0;
+                    }
+                    a {
+                        width: 210px;
+                        line-height: 20px;
+                        color: #999;
+                    }
+                    small {
+                        width: 210px;
+                        line-height: 20px;
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+}

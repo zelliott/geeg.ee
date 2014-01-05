@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'mixins';
 
 /* GLOBAL RESET
    ----------------------------- */
@@ -47,7 +48,7 @@ table {
 	border-spacing: 0;
 }
 
-/* GLOBAL STYLIZATIONS
+/* GLOBAL ELEMENT STYLIZATIONS
    ----------------------------- */
 
 input, textarea {
@@ -66,14 +67,52 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    font-size: 30px;
+b {
+    font-weight: bold;
 }
 
+small {
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Profile main headers */
+
+h3 {
+    color: #999;
+    font-weight: bold;
+    background-color: #eee;
+    border-bottom: 1px solid $light-gray-bdr;
+    width: $profile-width - 24;
+    padding: 12px;
+}
+
+/* Footer headers */
 h4 {
     font-size: 15px;
     font-weight: bold;
     color: #666;
+}
+
+/* Profile sidebar headers */
+
+h5 {
+    font-size: 15px;
+    color: #666;
+    font-weight: bold;
+    padding: 5px 0 20px 0;
+    border-top: 3px solid #666;
+}
+
+/* GLOBAL CLASS STYLIZATIONS
+   ----------------------------- */
+
+.circle {
+    @include border-radius(500px);
 }
 
 /* GLOBAL FRAMEWORK
@@ -92,11 +131,12 @@ body {
 
 #container {
     margin: 0 auto;
-    width: 960px;
+    width: $container-width;
 }
 
 #content {
-    height: 600px;
+    height: 1000px;
+    margin-top: 60px;
 }
 
 header {

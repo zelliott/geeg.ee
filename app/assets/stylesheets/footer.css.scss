@@ -1,6 +1,8 @@
 footer {
+    clear: both;
+    padding: 0 0 30px 0;
     div {
-        float: left;
+        display: inline-table;
         width: 25%;
         h4 {
             margin: 0 0 5px 0;
