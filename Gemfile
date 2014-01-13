@@ -52,3 +52,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'thin'
+
+# Rails engine for static pages
+gem 'high_voltage', '~> 2.1.0'
