@@ -1,80 +1,83 @@
-<div id="main">
-    <div id="quick-info">
-        <div>
-            <%= image_tag "white-square.png", :class => "circle" %>
+
+<div id="content">
+    <div id="main">
+        <div id="quick-info">
+            <div>
+                <%= image_tag "white-square.png", :class => "circle" %>
+            </div>
+            <div>
+                <div>
+                    <h1><%= @user.name %></h1>
+                    <small class="verified"><i class="fa fa-check"></i> Verified</small>
+                </div>
+                <div>
+                    <h2>HubridNoxx.193</h2>
+                </div>
+                <div>
+                    <div class="status"></div>
+                </div>
+                
+            </div>
         </div>
-        <div>
-            <div>
-                <h1><%= @user.name %></h1>
-                <small class="verified"><i class="fa fa-check"></i> Verified</small>
+        <div id="main-info">
+            <div class="main-block">
+                <h3><i class="fa fa-male"></i>About</h3>
+                <div class="main-block-left">
+                    <ul>
+                        <li>
+                            <b>Age</b>
+                            <span>19</span>
+                        </li>
+                        <li>
+                            <b>Location</b>
+                            <span>Seattle</span>
+                        </li>
+                        <li>
+                            <b>Language</b>
+                            <span>English</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-block-right">
+                    <p>
+                        This is my short little bio.  Here I talk about what I like, my hobbies, things I do in my spare time.  La dee da.
+                    </p>
+                </div>
             </div>
-            <div>
-                <h2>HubridNoxx.193</h2>
+            <div class="main-block">
+                <h3><i class="fa fa-gamepad"></i>Experience</h3>
             </div>
-            <div>
-                <div class="status"></div>
+            <div class="main-block">
+                <h3><i class="fa fa-bar-chart-o"></i>Statistics</h3>
             </div>
-            
+            <div class="main-block">
+                <h3><i class="fa fa-quote-left"></i>Recommendations</h3>
+            </div>
         </div>
     </div>
-    <div id="main-info">
-        <div class="main-block">
-            <h3><i class="fa fa-male"></i>About</h3>
-            <div class="main-block-left">
+    <div id="sidebar">
+        <div id="contact-region">
+            
+        </div>
+        <div id="sidebar-info">
+            <div id="related-players" class="sidebar-block">
+                <h5>Related Players</h5>
                 <ul>
                     <li>
-                        <b>Age</b>
-                        <span>19</span>
+                        <%= image_tag "small-white-square.png", :class => "circle" %>
+                        <%= link_to "Zack Elliott", "#" %>
+                        <small>Status of player</small>
                     </li>
                     <li>
-                        <b>Location</b>
-                        <span>Seattle</span>
-                    </li>
-                    <li>
-                        <b>Language</b>
-                        <span>English</span>
+                        <%= image_tag "small-white-square.png", :class => "circle" %>
+                        <%= link_to "Hubrid Noxx", "#" %>
+                        <small>Status of player</small>
                     </li>
                 </ul>
             </div>
-            <div class="main-block-right">
-                <p>
-                    This is my short little bio.  Here I talk about what I like, my hobbies, things I do in my spare time.  La dee da.
-                </p>
+            <div id="statistics" class="sidebar-block">
+                <h5>Profile Activity</h5>
             </div>
-        </div>
-        <div class="main-block">
-            <h3><i class="fa fa-gamepad"></i>Experience</h3>
-        </div>
-        <div class="main-block">
-            <h3><i class="fa fa-bar-chart-o"></i>Statistics</h3>
-        </div>
-        <div class="main-block">
-            <h3><i class="fa fa-quote-left"></i>Recommendations</h3>
-        </div>
-    </div>
-</div>
-<div id="sidebar">
-    <div id="contact-region">
-        
-    </div>
-    <div id="sidebar-info">
-        <div id="related-players" class="sidebar-block">
-            <h5>Related Players</h5>
-            <ul>
-                <li>
-                    <%= image_tag "small-white-square.png", :class => "circle" %>
-                    <%= link_to "Zack Elliott", "#" %>
-                    <small>Status of player</small>
-                </li>
-                <li>
-                    <%= image_tag "small-white-square.png", :class => "circle" %>
-                    <%= link_to "Hubrid Noxx", "#" %>
-                    <small>Status of player</small>
-                </li>
-            </ul>
-        </div>
-        <div id="statistics" class="sidebar-block">
-            <h5>Profile Activity</h5>
         </div>
     </div>
 </div>

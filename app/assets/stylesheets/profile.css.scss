@@ -24,7 +24,7 @@
                     display: inline-table;
                     margin: -6px 0 0 20px;
                     padding: 5px 10px;
-                    background-color: #00C9E6;
+                    background-color: $blue;
                     font-weight: bold;
                     @include border-radius(20px);
                 }
