@@ -9,6 +9,20 @@
           border-radius: $radius;
 }
 
+@mixin box-shadow($horiz-dist, $vert-dist, $blur-dist, $spread-dist, $blur-shade) {
+    -webkit-box-shadow: $horiz-dist $vert-dist $blur-dist $spread-dist $blur-shade;
+       -moz-box-shadow: $horiz-dist $vert-dist $blur-dist $spread-dist $blur-shade;
+            box-shadow: $horiz-dist $vert-dist $blur-dist $spread-dist $blur-shade;
+}
+
+@mixin filter($filter-value) {
+    -webkit-filter: $filter-value; /*To blur: blur(blur_amount);*/
+       -moz-filter: $filter-value;
+        -ms-filter: $filter-value;
+         -o-filter: $filter-value;
+            filter: $filter-value;
+}
+
 @mixin btn($btn-height, $btn-width, $btn-background-color, $btn-border-color, $btn-font-color, $font-size) {
     line-height: $btn-height;
     vertical-align: middle;

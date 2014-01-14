@@ -7,19 +7,23 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
-        <div id="wrap">
-            <%= render 'layouts/auth' %>
-            <div id="header-bkg">
-                <%= render 'layouts/header' %>
+        <%= render 'layouts/auth' %>
+        <div id="darken-blur-wrapper" onclick="hideSignIn();"></div>
+        <div id="blur-wrapper">
+            <div id="wrapper">
+                <div id="header-bkg">
+                    <%= render 'layouts/header' %>
+                </div>
+                <%= yield :about_header %>
+                <%= yield :team_header %>
+                <%= yield :contact_header %>
+                <div id="container">
+                    <%= yield %>
+                </div>
             </div>
-            <%= yield :about_header %>
-            <%= yield :team_header %>
-            <div id="container">
-                <%= yield %>
+            <div id="footer-bkg">
+                <%= render 'layouts/footer' %>
             </div>
-        </div>
-        <div id="footer-bkg">
-            <%= render 'layouts/footer' %>
         </div>
     </body>
 </html>
