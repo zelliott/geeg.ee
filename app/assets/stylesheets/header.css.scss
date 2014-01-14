@@ -3,6 +3,12 @@
 /* HEADER
    ----------------------------- */
 
+#header-bkg {
+    background-color: $header-bkg;
+    width: 100%;
+    height: $header-height;
+}
+
 #logo {
     float: left;
     margin-top: 15px;

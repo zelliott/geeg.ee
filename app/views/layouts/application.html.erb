@@ -7,12 +7,18 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
-        <%= render 'layouts/auth' %>
-        <div id="header-bkg">
-            <%= render 'layouts/header' %>
+        <div id="wrap">
+            <%= render 'layouts/auth' %>
+            <div id="header-bkg">
+                <%= render 'layouts/header' %>
+            </div>
+            <%= yield :about_header %>
+            <%= yield :team_header %>
+            <div id="container">
+                <%= yield %>
+            </div>
         </div>
-        <div id="container">
-            <%= yield %>
+        <div id="footer-bkg">
             <%= render 'layouts/footer' %>
         </div>
     </body>

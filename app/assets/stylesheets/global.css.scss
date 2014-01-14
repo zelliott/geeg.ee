@@ -29,24 +29,36 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html {
+    position: relative;
+    height: 100%;
+}
+
 body {
 	line-height: 1;
+    height: 100%;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 
 /* GLOBAL ELEMENT STYLIZATIONS
    ----------------------------- */
@@ -76,8 +88,13 @@ small {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 300;
 }
 
 /* Profile main section headers */
@@ -115,18 +132,35 @@ h5 {
     @include border-radius(500px);
 }
 
+/* GLOBAL SELECTOR STYLIZATIONS
+   ----------------------------- */
+
+/*
+::-moz-selection {
+    background: #FF5246; 
+    color: #fff; 
+    text-shadow: none;
+}
+::selection {
+    background: #FF5246;
+    color: #fff;
+    text-shadow: none;
+}
+*/
+
 /* GLOBAL FRAMEWORK
    ----------------------------- */
 
 body {
     font: 15px $font-stack;
     background-color: $bkg;
+    color: #fff;
 }
 
-#header-bkg {
-    background-color: $header-bkg;
-    width: 100%;
-    height: $header-height;
+#wrap {
+    margin: 0 auto -171px auto;
+    min-height: 100%;
+    height: auto;
 }
 
 #container {
@@ -134,12 +168,11 @@ body {
     width: $container-width;
 }
 
-#content {
-    height: 1000px;
+.content {
     margin-top: 60px;
 }
 
-header {
+header, footer, .sub-header {
     @extend #container;
     height: inherit;
 }
