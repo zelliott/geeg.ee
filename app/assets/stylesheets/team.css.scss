@@ -1,0 +1,55 @@
+@import 'vars';
+
+/* TEAM PAGE
+   ----------------------------- */
+
+#team-header-bkg {
+    background-color: $orange;
+    background-position: center;
+    height: 160px;
+    .sub-header {
+        position: relative;
+            span {
+                font-size: 40px;
+                font-weight: bold;
+                position: absolute;
+                bottom: 60px;
+                color: #fff;
+            }
+    }
+}
+
+
+.team-member {
+    .member-picture {
+        width: 300px;
+        float: left;
+    }
+    .member-info {
+        width: 600px;
+        float: left;
+        margin: 0 0 0 60px;
+        .member-name {
+            font-weight: bold;
+        }
+        .member-title {
+            margin: 10px 0;
+            color: $orange;
+            
+        }
+        .member-story {
+            font-size: 18px;
+            line-height: 28px;
+            color: #999;
+        }
+        .member-links {
+            font-size: 30px;
+            a {
+                color: #999;
+            }
+            i {
+                margin: 20px 20px 0 0;
+            }
+        }
+    }
+}
