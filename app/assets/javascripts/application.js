@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require retina-1.1.0.min
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .

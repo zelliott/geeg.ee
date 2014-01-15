@@ -51,7 +51,7 @@
             div {
                 display: inline-table;
                 position: relative;
-                width: $profile-width / 2;
+                width: ($profile-width - 1) / 2; // If I don't subtract 1, Safari doesn't fit stuff in the margins
                 ul {
                     li {
                         padding: 12px;
