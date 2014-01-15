@@ -1,7 +1,26 @@
 @import 'vars';
 @import 'mixins';
 
-/* PLAYER PROFILE
+/* PLAYER PROFILE HEADER (IF LOGGED IN)
+   ----------------------------- */
+
+#profile-header-bkg {
+    background-color: #333;
+    border-bottom: 1px solid #111;
+    background-position: center;
+    height: 60px;
+    .sub-header {
+        position: relative;
+            span {
+                font-size: 16px;
+                color: #999;
+                position: absolute;
+                bottom: 22px;
+            }
+    }
+}
+
+/* PLAYER PROFILE CONTENT
    ----------------------------- */
 
 #main {
@@ -44,9 +63,13 @@
         .main-block {
             width: inherit;
             background-color: #fff;
-            margin-bottom: 30px;
-            i {
+            min-height: 300px;
+            i:not(.float-r) {
                 margin-right: 12px;
+            }
+            i.fa-caret-down {  // I think it looks better 2px down and slightly faded
+                margin-top: 2px;
+                color: #ccc;
             }
             div {
                 display: inline-table;
@@ -56,7 +79,6 @@
                     li {
                         padding: 12px;
                         background-color: #f7f7f7;
-                        border-bottom: 1px solid $light-gray-bdr;
                         b {
                             color: #333;
                         }
@@ -79,6 +101,9 @@
                 margin-top: -3px;
                 margin-left: -5px;
             }
+        }
+        .main-block:first-child h3 {
+            border-top: none;
         }
     }
 }

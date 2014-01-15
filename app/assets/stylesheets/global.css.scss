@@ -102,6 +102,7 @@ h3 {
     color: #999;
     font-weight: bold;
     background-color: #eee;
+    border-top: 1px solid $light-gray-bdr;
     border-bottom: 1px solid $light-gray-bdr;
     width: $profile-width - 24;
     padding: 12px;
@@ -127,12 +128,24 @@ h5 {
 /* GLOBAL CLASS STYLIZATIONS
    ----------------------------- */
 
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
 .circle {
     @include border-radius(500px);
 }
 
 .clickable {
     cursor: pointer;
+}
+
+.pointable {
+    cursor: default;
 }
 
 /* GLOBAL SELECTOR STYLIZATIONS
@@ -165,7 +178,7 @@ body {
 }
 
 .blurred {
-    @include filter(blur(5px));
+    @include filter(blur(2px));
 }
 
 #darken-blur-wrapper {    
@@ -189,7 +202,8 @@ body {
 }
 
 .content {
-    margin-top: 60px;
+    float: left;
+    margin: 60px 0;
 }
 
 header, footer, .sub-header {

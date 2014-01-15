@@ -22,7 +22,6 @@
 
 .team-member {
     float: left;
-    margin-bottom: 60px;
     .member-picture {
         width: 300px;
         float: left;
@@ -54,4 +53,8 @@
             }
         }
     }
+}
+
+.team-member:first-child {
+    margin-bottom: 60px;
 }
