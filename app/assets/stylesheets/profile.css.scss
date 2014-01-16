@@ -16,6 +16,9 @@
                 color: #999;
                 position: absolute;
                 bottom: 22px;
+                i {
+                    margin-right: 12px;
+                }
             }
     }
 }
@@ -126,6 +129,22 @@
             h5 {
                 float: left;
                 width: 100%;
+            }
+        }
+        #permalink {
+            float: left;
+            input[type=text] {
+                @extend #permalink;
+                background-color: #111;
+                padding: 10px;
+                width: $sidebar-width - (37 + 20);
+                color: #666;
+            }
+            i {
+                @extend #permalink;
+                padding: 11px;
+                background-color: #111;
+                color: #999;
             }
         }
         #related-players {

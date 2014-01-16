@@ -9,10 +9,10 @@
           border-radius: $radius;
 }
 
-@mixin box-shadow($horiz-dist, $vert-dist, $blur-dist, $spread-dist, $blur-shade) {
-    -webkit-box-shadow: $horiz-dist $vert-dist $blur-dist $spread-dist $blur-shade;
-       -moz-box-shadow: $horiz-dist $vert-dist $blur-dist $spread-dist $blur-shade;
-            box-shadow: $horiz-dist $vert-dist $blur-dist $spread-dist $blur-shade;
+@mixin box-shadow($box-shadow) {
+    -webkit-box-shadow: $box-shadow;
+       -moz-box-shadow: $box-shadow;
+            box-shadow: $box-shadow;
 }
 
 @mixin filter($filter-value) {

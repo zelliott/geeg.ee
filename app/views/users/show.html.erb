@@ -1,7 +1,7 @@
 <% content_for :profile_header do %>
     <div id="profile-header-bkg">
         <div class="sub-header">
-            <span>This is a bar for editing profile and viewing as specific people/the public.</span>
+            <span><i class="fa fa-pencil"></i>Edit your profile</span>
         </div>
     </div>
 <% end %>
@@ -67,6 +67,10 @@
             
         </div>
         <div id="sidebar-info">
+            <div id="permalink" class="sidebar-block">
+                <input type="text" readonly="readonly" value="http://ggdeck.com/u/zackelliott" />
+                <i class="fa fa-copy clickable"></i>
+            </div>
             <div id="related-players" class="sidebar-block">
                 <h5>Related Players</h5>
                 <ul>
