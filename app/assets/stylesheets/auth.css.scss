@@ -5,37 +5,37 @@
    ----------------------------- */
 
 #auth {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    width: 400px;
-    height: 276;
     background-color: #fff;
-    margin: 120px 0 0 -200px;
+    display: none;
+    height: 276;
     left: 50%;
+    margin: 120px 0 0 -200px;
+    position: fixed;
+    width: 400px;
+    z-index: 10000;
     #auth-logo {
-        text-align: center;
-        padding: 30px 0;
         border-bottom: 1px solid $light-gray-bdr;
+        padding: 30px 0;
+        text-align: center;
     }
     #auth-form {
         input[type=text], input[type=password] {
+            background-color: #eee;
+            border-bottom: 1px solid $light-gray-bdr;
+            color: #999;
+            font-size: 18px;
             height: 40px;
             padding: 10px 20px;
             width: 360px;
-            border-bottom: 1px solid $light-gray-bdr;
-            background-color: #eee;
-            font-size: 18px;
-            color: #999;
         }
         input[type=submit] {
-            width: 400px;
-            text-align: center;
-            height: 60px;
-            font-size: 18px;
             background-color: $green;
             color: #fff;
-            font-weight: bold;
+            font-size: 18px;
+            font-weight: 600;
+            height: 60px;
+            width: 400px;
+            text-align: center;
         }
     }
 }

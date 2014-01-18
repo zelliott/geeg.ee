@@ -100,28 +100,31 @@ h2 {
 /* Profile main section headers */
 
 h3 {
+    text-transform: uppercase;
     color: #999;
-    font-weight: bold;
+    font-weight: 400;
     background-color: #eee;
     border-top: 1px solid $light-gray-bdr;
     border-bottom: 1px solid $light-gray-bdr;
-    width: $profile-width - 24;
-    padding: 12px;
+    width: $profile-width - 12;
+    padding: 12px 0 12px 12px;
 }
 
 /* Footer section headers */
 h4 {
+    text-transform: uppercase;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 400;
     color: #666;
 }
 
 /* Profile sidebar section headers */
 
 h5 {
+    text-transform: uppercase;
     font-size: 15px;
     color: #666;
-    font-weight: bold;
+    font-weight: 400;
     padding: 5px 0 20px 0;
     border-top: 3px solid #666;
 }
@@ -192,7 +195,7 @@ body {
 }
 
 #wrapper {
-    margin: 0 auto -171px auto;
+    margin: 0 auto -196px auto;
     min-height: 100%;
     height: auto;
 }

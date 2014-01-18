@@ -1,10 +1,4 @@
-<% content_for :profile_header do %>
-    <div id="profile-header-bkg">
-        <div class="sub-header">
-            <span><i class="fa fa-pencil"></i>Edit your profile</span>
-        </div>
-    </div>
-<% end %>
+<%= render 'layouts/profile_header_personal' %>
 
 <div class="content">
     <div id="main">
@@ -28,7 +22,7 @@
         </div>
         <div id="main-info">
             <div class="main-block">
-                <h3><i class="fa fa-male"></i>About<i class="fa fa-caret-down fa-lg float-r"></i></h3>
+                <h3><i class="fa fa-male"></i>About<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
                 <div class="main-block-left">
                     <ul>
                         <li>
@@ -52,43 +46,15 @@
                 </div>
             </div>
             <div class="main-block">
-                <h3><i class="fa fa-gamepad"></i>Experience<i class="fa fa-caret-down fa-lg float-r"></i></h3>
+                <h3><i class="fa fa-gamepad"></i>Experience<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
             </div>
             <div class="main-block">
-                <h3><i class="fa fa-bar-chart-o"></i>Statistics<i class="fa fa-caret-down fa-lg float-r"></i></h3>
+                <h3><i class="fa fa-bar-chart-o"></i>Statistics<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
             </div>
             <div class="main-block">
-                <h3><i class="fa fa-quote-left"></i>Recommendations<i class="fa fa-caret-down fa-lg float-r"></i></h3>
+                <h3><i class="fa fa-quote-left"></i>Recommendations<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
             </div>
         </div>
     </div>
-    <div id="sidebar">
-        <div id="contact-region">
-            
-        </div>
-        <div id="sidebar-info">
-            <div id="permalink" class="sidebar-block">
-                <input type="text" readonly="readonly" value="http://ggdeck.com/u/zackelliott" />
-                <i class="fa fa-copy clickable"></i>
-            </div>
-            <div id="related-players" class="sidebar-block">
-                <h5>Related Players</h5>
-                <ul>
-                    <li>
-                        <%= image_tag "small-white-square.png", :class => "circle" %>
-                        <%= link_to "Zack Elliott", "#" %>
-                        <small>Status of player</small>
-                    </li>
-                    <li>
-                        <%= image_tag "small-white-square.png", :class => "circle" %>
-                        <%= link_to "Hubrid Noxx", "#" %>
-                        <small>Status of player</small>
-                    </li>
-                </ul>
-            </div>
-            <div id="statistics" class="sidebar-block">
-                <h5>Profile Activity</h5>
-            </div>
-        </div>
-    </div>
+    <%= render 'layouts/profile_sidebar_session' %>
 </div>

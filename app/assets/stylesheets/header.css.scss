@@ -40,8 +40,8 @@
             vertical-align: middle;
             text-align: right;
             line-height: $header-height;
-            color: #111;
-            font-weight: bold;
+            color: #333;
+            font-weight: 600;
             font-size: 15px;
             a {
                 @extend #header-right-nav;

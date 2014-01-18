@@ -15,7 +15,7 @@
                 font-size: 16px;
                 color: #999;
                 position: absolute;
-                bottom: 22px;
+                bottom: 19px;
                 i {
                     margin-right: 12px;
                 }
@@ -47,7 +47,7 @@
                     margin: -6px 0 0 20px;
                     padding: 5px 10px;
                     background-color: $blue;
-                    font-weight: bold;
+                    font-weight: 600;
                     @include border-radius(20px);
                 }
                 h2 {
@@ -71,7 +71,7 @@
                 margin-right: 12px;
             }
             i.fa-caret-down {  // I think it looks better 2px down and slightly faded
-                margin-top: 2px;
+                padding: 2px 12px;
                 color: #ccc;
             }
             div {
@@ -115,10 +115,28 @@
     float: left;
     width: $sidebar-width;
     color: #fff;
-    #contact-region {
+    #connect-region {
         width: inherit;
         height: $top-profile-height;
-        
+        #follow-region {
+            #follow-btn {
+                float: left;
+                @include btn(12px 20px, $green, $dark-green, #fff, 15px);
+                margin-right: 16px;
+                i {
+                    margin-right: 12px;
+                }
+            }
+        }
+        #contact-region {
+            #contact-btn {
+                float: left;
+                @include btn(12px 20px, #999, #666, #fff, 15px);
+                i {
+                    margin-right: 12px;
+                }
+            }
+        }
     }
     #sidebar-info {
         margin-top: 60px;
@@ -133,16 +151,18 @@
         }
         #permalink {
             float: left;
+            @include border-radius(5px);
+            overflow: hidden;
             input[type=text] {
-                @extend #permalink;
+                float: left;
                 background-color: #111;
                 padding: 10px;
                 width: $sidebar-width - (37 + 20);
                 color: #666;
             }
             i {
-                @extend #permalink;
-                padding: 11px;
+                float: left;
+                padding: 13px 11px 12px 11px;
                 background-color: #111;
                 color: #999;
             }
