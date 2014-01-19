@@ -7,10 +7,12 @@
 #profile-header-bkg {
     background-color: #333;
     border-bottom: 1px solid #111;
-    background-position: center;
     height: 60px;
-    .sub-header {
+    > div {
         position: relative;
+        height: inherit;
+        width: $container-width;
+        margin: 0 auto;
             span {
                 font-size: 16px;
                 color: #999;
