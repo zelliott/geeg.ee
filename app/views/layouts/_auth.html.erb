@@ -2,6 +2,9 @@
     <div id="auth-logo">
         <%= image_tag "gg-logo.png" %>
     </div>
+	<!-- This needs to be styled -->
+	<%= flash[:error] %>
+	<!-- End comment -->
     <div id="auth-form">
         <%= form_for(:session, url: sessions_path) do |f| %>
             <%= f.text_field :email, :placeholder => "Email" %>

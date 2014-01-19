@@ -16,6 +16,11 @@
             </li>
         <% else %>
             <li id="signin" class="clickable" onclick="showSignIn();">Sign in</li>
+			<%  if flash[:error] %>
+				<%= javascript_tag do %>
+					showSignIn();
+				<% end %>
+			<% end %>
         <% end %>
         </ul>
     </nav>
