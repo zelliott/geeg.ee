@@ -20,22 +20,10 @@
     }
     #auth-form {
         input[type=text], input[type=password] {
-            background-color: #eee;
-            border-bottom: 1px solid $light-gray-bdr;
-            color: #999;
-            font-size: 18px;
-            height: 40px;
-            padding: 10px 20px;
-            width: 360px;
+            @include minimal-input(10px, 400px, #eee, #999, 0px, 0px, 1px, 0px);
         }
         input[type=submit] {
-            background-color: $green;
-            color: #fff;
-            font-size: 18px;
-            font-weight: 600;
-            height: 60px;
-            width: 400px;
-            text-align: center;
+            @include minimal-btn($green, #fff, 60px, 400px);
         }
     }
 }

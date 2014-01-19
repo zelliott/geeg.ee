@@ -119,9 +119,8 @@
         width: inherit;
         height: $top-profile-height;
         #follow-region {
-            #follow-btn {
+            > div {
                 float: left;
-                @include btn(12px 20px, $green, $dark-green, #fff, 15px);
                 margin-right: 16px;
                 i {
                     margin-right: 12px;
@@ -129,9 +128,8 @@
             }
         }
         #contact-region {
-            #contact-btn {
+            > div {
                 float: left;
-                @include btn(12px 20px, #999, #666, #fff, 15px);
                 i {
                     margin-right: 12px;
                 }

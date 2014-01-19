@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'mixins';
 
 /* HEADER
    ----------------------------- */
@@ -20,13 +21,7 @@
     #search {
         margin-left: 60px;
         height: 40px;
-        padding: 10px 20px;
-        width: 400px;
-        border-left: 1px solid $light-gray-bdr;
-        border-right: 1px solid $light-gray-bdr;
-        background-color: #eee;
-        font-size: 18px;
-        color: #999;
+        @include minimal-input(10px, 400px, #eee, #999, 0px, 1px, 0px, 1px);
     }
 }
 

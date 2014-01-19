@@ -32,3 +32,27 @@
     font-weight: 600;
     @include border-radius(10px);
 }
+
+@mixin minimal-btn($btn-background-color, $btn-font-color, $btn-height, $btn-width) {
+    background-color: $btn-background-color;
+    color: $btn-font-color;
+    font-size: 18px;
+    font-weight: 600;
+    height: $btn-height;
+    width: $btn-width;
+    text-align: center;
+}
+
+@mixin minimal-input($input-top-pad, $input-width, $input-background-color, $input-font-color, $bdr-top, $bdr-right, $bdr-bottom, $bdr-left) {
+    height: 40px;
+    padding: $input-top-pad 20px;
+    width: $input-width - 40;
+    border: 1px solid $light-gray-bdr;
+    border-top-width: $bdr-top;
+    border-right-width: $bdr-right;
+    border-bottom-width: $bdr-bottom;
+    border-left-width: $bdr-left;
+    background-color: $input-background-color;
+    font-size: 18px;
+    color: $input-font-color;
+}
