@@ -1,0 +1,15 @@
+@import 'vars';
+@import 'mixins';
+
+/* BUTTONS
+   ----------------------------- */
+
+.green-sm-btn {
+    @include btn(12px 20px, $green, $dark-green, #fff, 15px);
+    cursor: pointer;
+}
+
+.gray-sm-btn {
+    @include btn(12px 20px, #999, #666, #fff, 15px);
+    cursor: pointer;
+}

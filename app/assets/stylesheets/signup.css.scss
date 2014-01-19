@@ -1,0 +1,63 @@
+@import 'vars';
+@import 'mixins';
+
+/* SIMPLE HEADER
+   ----------------------------- */
+
+#tall-header-bkg {
+    background-color: $header-bkg;
+    height: $tall-header-height;
+    width: 100%;
+}
+
+/* SIGNUP CONTENT
+   ----------------------------- */
+
+#signup-content {
+    float: left;
+    margin: -280px 0 60px 0;
+    width: $container-width;
+    #signup-steps {
+        float: left;
+        margin-top: 280px + 60;
+        ul {
+            li {
+                color: #666;
+                padding: 10px 0;
+            }
+        }
+    }
+    #signup-frame {
+        margin: 0 auto;
+        width: 600px;
+        #signup-banner {
+            text-align: center;
+            #banner-logo {
+                width: 120px;
+                margin: 0 240px;
+            }
+            #banner-motto {
+                color: $red;
+                font-size: 30px;
+                margin: 20px 0 0 0;
+            }
+        }
+        #signup-form {
+            background-color: #eee;
+            margin-top: 60px;
+            label {
+                float: left;
+                padding: 12px 20px;
+                text-transform: uppercase;
+                color: #666;
+                font-weight: 300;
+            }
+            input[type=text], input[type=password] {
+                @include minimal-input(17px, 600px, #eee, #999, 0px, 0px, 1px, 0px);
+            }
+            input[type=submit] {
+                @include minimal-btn($green, #fff, 75px, 600px)
+            }
+        }
+    }
+}

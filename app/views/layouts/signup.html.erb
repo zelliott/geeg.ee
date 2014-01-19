@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ggdeck | </title>
+        <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <%= render 'layouts/auth' %>
+        <div id="darken-blur-wrapper" onclick="hideSignIn();"></div>
+        <div id="blur-wrapper">
+            <div id="wrapper">
+                <div id="tall-header-bkg">
+                    <%= render 'layouts/tall_header' %>
+                </div>
+                <div id="container">
+                    <%= yield %>
+                </div>
+            </div>
+            <div id="footer-bkg">
+                <%= render 'layouts/footer' %>
+            </div>
+        </div>
+    </body>
+</html>
