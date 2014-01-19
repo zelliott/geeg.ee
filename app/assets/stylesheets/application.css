@@ -11,6 +11,7 @@
  *= require_self
  *= require font-awesome
  *= require vars
+ *= require reset
  *= require global
  *= require_tree .
  */

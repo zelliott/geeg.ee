@@ -5,16 +5,5 @@
 
 #contact-header-bkg {
     background-color: $orange-yellow;
-    background-position: center;
     height: 160px;
-    .sub-header {
-        position: relative;
-            span {
-                font-size: 40px;
-                font-weight: 600;
-                position: absolute;
-                bottom: 60px;
-                color: #fff;
-            }
-    }
 }
