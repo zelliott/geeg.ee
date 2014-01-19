@@ -1,4 +1,11 @@
-<<<<<<< HEAD
+<div>
+	<% if flash[:errors] %>
+		<% flash[:errors].full_messages.each do |e| %>
+			<%= e %>
+			<br>
+		<% end %>
+	<% end %>
+</div>
 <div id="signup-content">
     <div id="signup-steps">
         <ul>
@@ -30,40 +37,4 @@
             <% end %>
         </div>
     </div>
-=======
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
-
-<div>
-	<% if flash[:errors] %>
-		<% flash[:errors].full_messages.each do |e| %>
-			<%= e %>
-			<br>
-		<% end %>
-	<% end %>
-</div>
-
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-	  
-      <%= f.label :alias %>
-      <%= f.text_field :alias %>
-
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
-
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
-    <% end %>
-  </div>
->>>>>>> 65e931d087cfa6398c2cb20418372c29dcb066be
 </div>
