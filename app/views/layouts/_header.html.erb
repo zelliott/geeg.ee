@@ -6,21 +6,16 @@
     <nav id="header-right-nav">
         <ul id="header-nav-menu">
         <% if signed_in? %>
-            <li class="clickable">
-                <a href="#">Zack<i class="fa fa-caret-down"></i></a>
-                <ul id="header-dropdown-menu">
-                    <li><%= link_to "Profile", current_user %></li>
-                    <li><%= link_to "Settings", '#' %></li>
-                    <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
-                </ul>
+            <li class="clickable" onclick="toggleDropdownHeader();">
+                Zack<i id="dropdown-header-arrow" class="fa fa-caret-down"></i>
             </li>
         <% else %>
             <li id="signin" class="clickable" onclick="showSignIn();">Sign in</li>
-			<%  if flash[:error] %>
-				<%= javascript_tag do %>
-					showSignIn();
-				<% end %>
-			<% end %>
+            <%  if flash[:error] %>
+                <%= javascript_tag do %>
+                    showSignIn();
+                <% end %>
+            <% end %>
         <% end %>
         </ul>
     </nav>

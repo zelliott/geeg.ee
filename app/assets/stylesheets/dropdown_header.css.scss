@@ -1,0 +1,76 @@
+@import 'vars';
+@import 'mixins';
+
+/* DROPDOWN HEADER
+   ----------------------------- */
+
+#dropdown-header-bkg {
+    background-color: $dropdown-header-bkg;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    > div {
+        position: relative;
+        width: $container-width;
+        margin: 0 auto;
+        > div {
+            float: left;
+        }
+    }
+}
+
+#dropdown-header-bkg.on {
+    border-top: $light-gray-bdr;
+}
+
+#dropdown-summary {
+    width: 700px;
+    > div {
+        float: left;
+        margin: 20px 30px 0 0;
+        img {
+            height: 80px;
+            width: 80px;
+        }
+        #summary-name {
+            font-size: 24px;
+            color: #666;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        #summary-account {
+            font-size: 20px;
+            font-weight: 400;
+            color: $orange;
+            a {
+                margin-left: 30px;
+                color: #999;
+                i {
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+}
+
+#dropdown-account {
+    div {
+        display: block;
+        color: #999;
+        font-size: 20px;
+        font-weight: 400;
+        padding-top: 20px;
+            i {
+                margin-right: 12px;
+            }
+    }
+}
+
+#hide-dropdown-header {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    font-weight: 600;
+    font-size: 24px;
+    color: #bbb;
+}

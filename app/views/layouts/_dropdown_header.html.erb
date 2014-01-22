@@ -1,0 +1,33 @@
+<div id="dropdown-header-bkg">
+    <div>
+        <div id="dropdown-summary">
+            <h6>SUMMARY</h6>
+            <div>
+                <%= image_tag "white-square.png", :class => "circle"  %>
+            </div>
+            <div>
+                <div id="summary-name"><a href="">Zack Elliott</a></div>
+                <div id="summary-account">Player Account<a href="">Change<i class="fa fa-angle-right"></i></a></div>
+            </div>
+        </div>
+        <div id="dropdown-account">
+            <i id="hide-dropdown-header" class="fa fa-times clickable" onclick="toggleDropdownHeader();"></i>
+            <h6>ACCOUNT</h6>
+            <div>
+                <%= link_to current_user do %>
+                    <i class="fa fa-user"></i>My Profile
+                <% end %>
+            </div>
+            <div>
+                <%= link_to '#' do %>
+                    <i class="fa fa-cog"></i>Settings
+                <% end %>
+            <div>
+            </div>
+                <%= link_to signout_path do %>
+                    <i class="fa fa-sign-out"></i>Logout
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

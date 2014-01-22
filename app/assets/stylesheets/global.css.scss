@@ -32,15 +32,15 @@ b {
 
 h1 {
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 h2 {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
-h3, h4, h5 {
+h3, h4, h5, h6 {
     text-transform: uppercase;
     font-weight: 400;
     
@@ -51,8 +51,8 @@ h3, h4, h5 {
 h3 {
     color: #999;
     background-color: #eee;
-    border-top: 1px solid $light-gray-bdr;
-    border-bottom: 1px solid $light-gray-bdr;
+    border-top: $light-gray-bdr;
+    border-bottom: $light-gray-bdr;
     width: $profile-width - 12;
     padding: 12px 0 12px 12px;
 }
@@ -68,6 +68,10 @@ h5 {
     color: #666;
     padding: 5px 0 20px 0;
     border-top: 3px solid #666;
+}
+
+h6 {
+    color: #bbb;
 }
 
 /* GLOBAL CLASS STYLIZATIONS
@@ -162,18 +166,15 @@ header, footer, #about-header-bkg > div {
  * it is a different height and has an image background
 */
 
-.sub-header {
-    background-position: center;
-    > div {
-        @extend #container;
-        height: inherit;
-        position: relative;
-            span {
-                font-size: 40px;
-                font-weight: 600;
-                position: absolute;
-                bottom: 60px;
-                color: #fff;
-            }
-    }
+.sub-header > div {
+    @extend #container;
+    height: inherit;
+    position: relative;
+        span {
+            font-size: 40px;
+            font-weight: 600;
+            position: absolute;
+            bottom: 60px;
+            color: #fff;
+        }
 }

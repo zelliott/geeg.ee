@@ -7,7 +7,7 @@
     background-color: $footer-bkg;
     width: 100%;
     position: relative;
-    height: $footer-height;
+    height: $footer-height; /* without padding... it would actually be $footer-height - (30 + 30) */
     padding: 30px 0;
     clear: both;
 }

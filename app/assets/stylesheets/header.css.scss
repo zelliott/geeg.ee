@@ -38,11 +38,8 @@
             color: #333;
             font-weight: 600;
             font-size: 15px;
-            a {
-                @extend #header-right-nav;
-                i {
-                    margin-left: 213px;
-                }
+            i {
+                margin-left: 213px;
             }
             ul#header-dropdown-menu {
                 display: none;

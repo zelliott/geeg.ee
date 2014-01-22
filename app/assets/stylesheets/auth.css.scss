@@ -14,7 +14,7 @@
     width: 400px;
     z-index: 10000;
     #auth-logo {
-        border-bottom: 1px solid $light-gray-bdr;
+        border-bottom: $light-gray-bdr;
         padding: 30px 0;
         text-align: center;
     }

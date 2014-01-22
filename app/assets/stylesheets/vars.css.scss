@@ -4,9 +4,10 @@
 $font-stack: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
 $container-width: 960px;
 $header-height: 60px;
+$dropdown-header-height: 180px;
 $tall-header-height: 400px;
-$profile-width: 670px;
-$sidebar-width: $container-width - $profile-width - 30;
+$profile-width: 670px; /* 700 - 30 (for padding) */
+$sidebar-width: 260px; /* $container-width - $profile width - 30 (for padding) */
 $top-profile-height: 120px;
 $footer-height: 136px;
 
@@ -23,5 +24,7 @@ $purple: #9841FF;
 /* COLORS */
 $bkg: #222;
 $header-bkg: #fff;
+$dropdown-header-bkg: #eee;
 $footer-bkg: #111;
-$light-gray-bdr: #ddd;
+$light-gray-bdr: 1px solid #ddd;
+$medium-gray-bdr: 1px solid #999;
