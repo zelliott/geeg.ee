@@ -5,7 +5,6 @@
    ----------------------------- */
 
 #auth {
-    background-color: #fff;
     display: none;
     height: 276;
     left: 50%;
@@ -13,17 +12,46 @@
     position: fixed;
     width: 400px;
     z-index: 10000;
+    .warning-box {
+        margin-bottom: 5px;
+        line-height: 60px;
+        height: 60px;
+        width: 400px;
+        text-align: center;
+    }
     #auth-logo {
         border-bottom: $light-gray-bdr;
         padding: 30px 0;
         text-align: center;
+        background-color: #fff;
     }
     #auth-form {
         input[type=text], input[type=password] {
             @include minimal-input(10px, 400px, #eee, #999, 0px, 0px, 1px, 0px);
         }
+
+        #auth-remember-section {
+            background-color: #fff;
+            color: #999;
+            float: right;
+            width: 200px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 18px;
+            text-align: center;
+            input[type=checkbox] {
+                display: none;
+            }
+            i.fa-square-o {
+                margin-right: 13px;
+            }
+            i.fa-check-square-o {
+                margin-right: 12px;
+            }
+        }
+
         input[type=submit] {
-            @include minimal-btn($green, #fff, 60px, 400px);
+            @include minimal-btn($green, #fff, 60px, 200px);
         }
     }
 }

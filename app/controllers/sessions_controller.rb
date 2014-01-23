@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       sign_in(user, params[:session][:remember_me])
       redirect_to user
     else
-      flash[:error] = "Invalid credentials!"
+      flash[:error] = "<div class='warning-box'>Invalid credentials</div>"
       redirect_to :back
     end
   end

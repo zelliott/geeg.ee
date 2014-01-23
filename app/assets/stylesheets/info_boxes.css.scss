@@ -1,0 +1,10 @@
+@import 'vars';
+@import 'mixins';
+
+/* INFO BOXES
+   ----------------------------- */
+.warning-box {
+    background-color: $pale-yellow;
+    color: #333;
+    font-size: 18px;
+}

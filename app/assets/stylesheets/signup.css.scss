@@ -48,6 +48,14 @@
             }
         }
         #signup-form {
+            .warning-box {
+                div {
+                    padding: 0 20px 20px 20px;
+                }
+                div:first-child {
+                    padding-top: 20px;
+                }
+            }
             background-color: #eee;
             margin-top: 60px;
             label {

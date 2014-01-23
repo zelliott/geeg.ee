@@ -21,6 +21,10 @@ input[type=button], input[type=image], input[type=submit] {
     cursor: pointer;
 }
 
+label {
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color: inherit;

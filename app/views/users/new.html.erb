@@ -1,11 +1,3 @@
-<div>
-	<% if flash[:errors] %>
-		<% flash[:errors].full_messages.each do |e| %>
-			<%= e %>
-			<br>
-		<% end %>
-	<% end %>
-</div>
 <div id="signup-content">
     <div id="signup-steps">
         <ul>
@@ -20,6 +12,14 @@
             <div id="banner-motto">Your professional esports network.</div>
         </div>
         <div id="signup-form">
+            <div class="warning-box">
+                <% if flash[:errors] %>
+                    <% flash[:errors].full_messages.each do |e| %>
+                        <div><%= e %></div>
+                    <% end %>
+                <% end %>
+            </div>
+            
             <%= form_for(@user) do |f| %>
     
             <%= f.text_field :name, placeholder: "Full name" %>

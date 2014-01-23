@@ -1,18 +1,19 @@
 <div id="auth">
+    <%= raw flash[:error] %>
     <div id="auth-logo">
         <%= image_tag "gg-logo.png" %>
     </div>
-	<!-- This needs to be styled -->
-	<%= flash[:error] %>
-	<!-- End comment -->
     <div id="auth-form">
         <%= form_for(:session, url: sessions_path) do |f| %>
             <%= f.text_field :email, :placeholder => "Email" %>
             <%= f.password_field :password, :placeholder => "Password" %>
 			
-			<%= f.check_box :remember_me %>
-			<%= f.label "Remember Me" %>
-			
+			<div id="auth-remember-section">
+                <label>
+                    <%= f.check_box :remember_me %>
+                    <i class="fa fa-square-o fa-fw"></i>Remember me
+                </label>
+            </div>
             <%= f.submit "Sign in" %>
         <% end %>
     </div>
