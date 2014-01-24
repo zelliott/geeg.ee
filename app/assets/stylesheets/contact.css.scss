@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'mixins';
 
 /* CONTACT PAGE
    ----------------------------- */
@@ -6,4 +7,51 @@
 #contact-header-bkg {
     background-color: $orange-yellow;
     height: 160px;
+}
+
+#contact-form {
+    form > div {
+        font-size: 24px;
+        color: #999;
+        font-weight: 400;
+        margin-bottom: 30px;
+        > div {
+            float: left;
+            line-height: 60px;
+            width: 320px;
+        }
+        input[type=text] {
+            border-bottom: 5px solid #333;
+            height: 40px;
+            padding: 10px 0 5px 0px; 
+            font-size: 24px;
+            color: #fff;
+            width: 400px;
+        }
+        textarea {
+            border: 5px solid #333;
+            padding: 10px;
+            font-size: 15px;
+            color: #fff;
+            width: 400px - 30;
+            height: 300px;
+            resize: none;
+        }
+        #contact-subject {
+            cursor: pointer;
+            height: 60px;
+            -webkit-appearance: none;
+            background-color: #333;
+            color: #999;
+            border: none;
+            font-size: 24px;
+            padding: 10px 20px 10px 20px;
+            @include border-radius(0px);
+        }
+        input[type=submit] {
+            @include minimal-btn($green, #fff, 60px, 200px);
+            font-size: 24px;
+            float: right;
+        }
+    }
 }

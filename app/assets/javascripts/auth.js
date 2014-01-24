@@ -10,7 +10,7 @@ function hideSignIn() {
     $("#darken-blur-wrapper").hide();
 }
 
-$( document ).ready(function() {
+$(document).ready(function() {
     $("input[type=checkbox]").change(function () {
         $checkbox = $(this)
         $icon = $checkbox.siblings("i")

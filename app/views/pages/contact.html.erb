@@ -7,5 +7,27 @@
 <% end %>
 
 <div class="content">
-    
+    <div id="contact-form">
+        <%= form_tag do %>
+            <div id="contact-name">
+                <div>My name is</div>
+                <%= text_field "name", nil, placeholder: "Name" %>
+            </div>
+            <div id="contact-email">
+                <div>You can get back to me at</div>
+                <%= text_field "email", nil, placeholder: "Email" %>
+            </div>
+            <div>
+                <div>I'm contacting you about</div>
+                <%= select_tag("contact-subject", options_for_select([['Click to choose subject', 1], ['Something', 2]], 1)) %>
+            </div>
+            <div>
+                <div>Here's my message</div>
+                <textarea></textarea>
+            </div>
+            <div>
+                <%= submit_tag "Send" %>
+            </div>
+        <% end %>
+    </div>
 </div>
