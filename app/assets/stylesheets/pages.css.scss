@@ -1,0 +1,32 @@
+@import 'vars';
+@import 'mixins';
+
+/* PAGES
+   ----------------------------- */
+
+/* 
+ * For the footer pages that have a small colored sub header
+ * This does not include the #about-header-bkg (referenced instead above) because
+ * it is a different height and has an image background
+*/
+
+.sub-header > div {
+    margin: 0 auto;
+    width: $container-width;
+    height: inherit;
+    position: relative;
+    color: #fff;
+        .header-desc {
+            font-size: 24px;
+            font-weight: 600;
+            position: absolute;
+            opacity: 0.6;
+            top: 36px;
+        }
+        .header-title {
+            font-size: 40px;
+            font-weight: 600;
+            position: absolute;
+            bottom: 36px;
+        }
+}

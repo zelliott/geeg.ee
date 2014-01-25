@@ -163,22 +163,3 @@ header, footer, #about-header-bkg > div {
     @extend #container;
     height: inherit;
 }
-
-/* 
- * For the footer pages that have a small colored sub header
- * This does not include the #about-header-bkg (referenced instead above) because
- * it is a different height and has an image background
-*/
-
-.sub-header > div {
-    @extend #container;
-    height: inherit;
-    position: relative;
-        span {
-            font-size: 40px;
-            font-weight: 600;
-            position: absolute;
-            bottom: 60px;
-            color: #fff;
-        }
-}

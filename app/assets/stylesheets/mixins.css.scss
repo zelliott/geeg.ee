@@ -23,6 +23,14 @@
             filter: $filter-value;
 }
 
+@mixin Opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+
 @mixin btn($btn-pad, $btn-background-color, $btn-bdr-color, $btn-font-color, $font-size) {
     padding: $btn-pad;
     background-color: $btn-background-color;

@@ -7,16 +7,5 @@
     height: 400px;
     background-image: url("about-header-img-darker.png");
     background-position: center;
-    > div {
-        position: relative;
-            span {
-                bottom: 60px;
-                color: #ffffff;
-                font-size: 80px;
-                font-weight: 600;
-                position: absolute;
-                text-shadow: 5px 3px 0px rgba(0,0,0,1);
-            }
-    }
 }
 
