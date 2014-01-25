@@ -25,11 +25,9 @@ class User < ActiveRecord::Base
     UserMailer.password_reset(self).deliver
   end
 
-  private
-
-    def generate_token(column)
-      begin
-        self[column] = User.encrypt(User.new_token)
-      end while User.exists?(column => self[column])
-    end
+  def generate_token(column)
+    begin
+      self[column] = User.encrypt(User.new_token)
+    end while User.exists?(column => self[column])
+  end
 end
