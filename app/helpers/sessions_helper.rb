@@ -1,6 +1,6 @@
 module SessionsHelper
   def sign_in(user, remember_me)
-    remember_token = User.new_remember_token
+    remember_token = User.generate_token(:remember_token)
     if remember_me == "1"
       cookies.permanent[:remember_token] = remember_token
     else
@@ -26,7 +26,7 @@ module SessionsHelper
     
   def sign_out
     current_user.update_attribute(:remember_token,
-                                  User.encrypt(User.new_remember_token))
+                                  User.encrypt(User.generate_token(:remember_token)))
     cookies.delete(:remember_token)
     self.current_user = nil
   end
