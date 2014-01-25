@@ -17,6 +17,13 @@ class User < ActiveRecord::Base
   def User.encrypt(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
+  
+  def send_password_reset
+    generate_token(:password_reset_token)
+    self.password_expires_after = Time.zone.now + 2.hours
+    save!
+    UserMailer.password_reset(self).deliver
+  end
 
   private
 
