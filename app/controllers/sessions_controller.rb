@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       sign_in(user, params[:session][:remember_me])
-      redirect_to user
+      redirect_to :back
     else
       flash[:error] = "<div class='warning-box'>Invalid credentials</div>"
       redirect_to :back
@@ -16,6 +16,6 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    redirect_to root_url
+    redirect_to :back
   end
 end
