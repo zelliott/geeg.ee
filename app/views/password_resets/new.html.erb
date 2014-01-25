@@ -1,10 +1,10 @@
 <p>Forgot Password</p>
-<%= form_for @user, :as => :user, :url => forgot_password_path, :method => :put do |f| %>
+<%= form_tag password_resets_path, :method => :post do %>
 	<p>
-		<%= f.label 'Enter your email address' %><br>
-		<%= f.text_field :email %>
+		<%= label_tag 'Enter your email address' %><br>
+		<%= text_field_tag :email %>
 	</p>
 	<p>
-		<%= f.submit 'Send Password Reset Instructions' %>
+		<%= submit_tag 'Send Password Reset Instructions' %>
 	</p>
 <% end %>
