@@ -29,5 +29,6 @@ class User < ActiveRecord::Base
     begin
       self[column] = User.encrypt(User.new_token)
     end while User.exists?(column => self[column])
+    self[column]
   end
 end
