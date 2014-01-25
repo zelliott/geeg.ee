@@ -1,5 +1,5 @@
 <p>Forgot Password</p>
-<%= form_for @user, :as => :user, :url => forgot_password_path, :method =. put do |f| %>
+<%= form_for @user, :as => :user, :url => forgot_password_path, :method => :put do |f| %>
 	<p>
 		<%= f.label 'Enter your email address' %><br>
 		<%= f.text_field :email %>
