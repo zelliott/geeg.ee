@@ -1,5 +1,4 @@
 App::Application.routes.draw do
-  get "password_resets/new"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :password_resets
