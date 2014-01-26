@@ -9,7 +9,7 @@
             <li><%= link_to "About", page_path(id: 'about') %></li>
             <li><%= link_to "Blog", "#" %></li>
             <li><%= link_to "Team", page_path(id: 'team') %></li>
-            <li><%= link_to "Contact", page_path(id: 'contact') %></li>
+            <li><%= mail_to "hello@ggdeck.com", "Contact" %></li>
         </ul>
     </div>
     <div>

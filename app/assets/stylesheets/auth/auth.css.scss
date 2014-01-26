@@ -6,39 +6,41 @@
 
 #auth {
     display: none;
+    background-color: #fff;
     height: 276;
     left: 50%;
     margin: 120px 0 0 -200px;
     position: fixed;
     width: 400px;
     z-index: 10000;
+    @include border-radius(10px);
+    overflow: hidden;
     .warning-box {
-        margin-bottom: 5px;
         line-height: 60px;
         height: 60px;
         width: 400px;
         text-align: center;
     }
     #auth-logo {
-        border-bottom: $light-gray-bdr;
-        padding: 30px 0;
+        padding: 30px 0 10px 0;
         text-align: center;
         background-color: #fff;
     }
     #auth-form {
         input[type=text], input[type=password] {
-            @include minimal-input(10px, 400px, #eee, #999, 0px, 0px, 1px, 0px);
+            @include input(10px, 360px, #eee, #999, #ddd);
+            margin: 20px 20px 0 20px;
         }
 
         #auth-remember-section {
-            background-color: #fff;
+            float: left;
             color: #999;
-            float: right;
-            width: 200px;
+            width: 160px;
             height: 60px;
             line-height: 60px;
             font-size: 18px;
             text-align: center;
+            margin: 20px;
             input[type=checkbox] {
                 display: none;
             }
@@ -51,7 +53,21 @@
         }
 
         input[type=submit] {
-            @include minimal-btn($green, #fff, 60px, 200px);
+            width: 160px;
+            height: 60px;
+            font-size: 18px;
+            margin: 20px;
+        }
+        #auth-actions {
+            width: inherit;
+            text-align: center;
+            color: #999;
+            margin: 10px 0 30px 0;
+            a {
+                padding-bottom: 3px;
+                margin: 0 30px;
+                border-bottom: 1px solid #999;
+            }
         }
     }
 }

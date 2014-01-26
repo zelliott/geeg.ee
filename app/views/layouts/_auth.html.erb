@@ -14,8 +14,11 @@
                     <i class="fa fa-square-o fa-fw"></i>Remember me
                 </label>
             </div>
-            <%= f.submit "Sign in" %>
+            <%= f.submit "Sign in", :class => "green-sm-btn" %>
         <% end %>
+        <div id="auth-actions">
+            <%= link_to "Create an account", "#" %><%= link_to "Forgot password?", "#" %>
+        </div>
     </div>
     
 </div>

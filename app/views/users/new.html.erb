@@ -27,6 +27,9 @@
             <%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
             <%= f.submit "Sign up" %>
             <% end %>
+            <div id="form-note">
+                By clicking this button you agree to GGDeck's <%= link_to "Terms and Conditions", page_path(id: 'terms') %>
+            </div>
         </div>
     </div>
 </div>

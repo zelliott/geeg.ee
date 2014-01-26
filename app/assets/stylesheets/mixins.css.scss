@@ -23,25 +23,14 @@
             filter: $filter-value;
 }
 
-@mixin Opacity($value){
+@mixin opacity($value){
   $IEValue: $value*100;
   opacity: $value;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
   filter: alpha(opacity=$IEValue);
 }
 
-
-@mixin btn($btn-pad, $btn-background-color, $btn-bdr-color, $btn-font-color, $font-size) {
-    padding: $btn-pad;
-    background-color: $btn-background-color;
-    border-bottom: 4px solid $btn-bdr-color;
-    color: $btn-font-color;
-    font-size: $font-size;
-    font-weight: 600;
-    @include border-radius(10px);
-}
-
-@mixin minimal-btn($btn-background-color, $btn-font-color, $btn-height, $btn-width) {
+@mixin flat-btn($btn-background-color, $btn-font-color, $btn-height, $btn-width) {
     background-color: $btn-background-color;
     color: $btn-font-color;
     font-size: 18px;
@@ -51,7 +40,7 @@
     text-align: center;
 }
 
-@mixin minimal-input($input-top-pad, $input-width, $input-background-color, $input-font-color, $bdr-top, $bdr-right, $bdr-bottom, $bdr-left) {
+@mixin flat-input($input-top-pad, $input-width, $input-background-color, $input-font-color, $bdr-top, $bdr-right, $bdr-bottom, $bdr-left) {
     height: 40px;
     padding: $input-top-pad 20px;
     width: $input-width - 40;
@@ -65,13 +54,33 @@
     color: $input-font-color;
 }
 
-/* Currently not using, will have to clean up */
+@mixin btn($btn-pad, $btn-background-color, $btn-bdr-color, $btn-font-color, $font-size) {
+    padding: $btn-pad;
+    background-color: $btn-background-color;
+    border-bottom: 4px solid $btn-bdr-color;
+    color: $btn-font-color;
+    font-size: $font-size;
+    font-weight: 600;
+    @include border-radius(10px);
+}
 
-@mixin input($input-pad, $input-width, $input-background-color, $input-font-color, $font-size) {
-    padding: $input-pad;
-    width: $input-width;
+@mixin input($input-top-pad, $input-width, $input-background-color, $input-font-color, $input-shadow-color) {
+    height: 40px;
+    padding: $input-top-pad 20px;
+    width: $input-width - 40;
     background-color: $input-background-color;
+    font-size: 18px;
     color: $input-font-color;
     @include border-radius(10px);
-    font-size: $font-size;
+    @include box-shadow(0px 2px 0px $input-shadow-color inset);
+}
+
+@mixin textarea($textarea-top-pad, $textarea-width, $textarea-background-color, $textarea-font-color, $textarea-shadow-color) {
+    padding: $textarea-top-pad 20px;
+    width: $textarea-width - 40;
+    background-color: $textarea-background-color;
+    font-size: 18px;
+    color: $textarea-font-color;
+    @include border-radius(10px);
+    @include box-shadow(0px 2px 0px $textarea-shadow-color inset);
 }
