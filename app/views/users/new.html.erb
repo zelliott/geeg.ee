@@ -11,7 +11,7 @@
             <%= image_tag "gg-logo-lg-3d.png", :id => "banner-logo" %>
             <div id="banner-motto">Your professional esports network.</div>
         </div>
-        <div id="signup-form">
+        <div>
             <div class="warning-box">
                 <% if flash[:errors] %>
                     <% flash[:errors].full_messages.each do |e| %>
@@ -19,21 +19,13 @@
                     <% end %>
                 <% end %>
             </div>
-            
             <%= form_for(@user) do |f| %>
-    
-            <%= f.text_field :name, placeholder: "Full name" %>
-          
+            <%= f.text_field :name, placeholder: "Full name" %>        
             <%= f.text_field :alias, placeholder: "Alias" %>
-    
-            <%= f.text_field :email, placeholder: "Email" %>
-    
-            <%= f.password_field :password, placeholder: "Password" %>
-    
+            <%= f.text_field :email, placeholder: "Email" %>  
+            <%= f.password_field :password, placeholder: "Password" %>  
             <%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
-    
             <%= f.submit "Sign up" %>
-            
             <% end %>
         </div>
     </div>
