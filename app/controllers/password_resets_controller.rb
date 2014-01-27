@@ -1,4 +1,5 @@
 class PasswordResetsController < ApplicationController
+  layout 'sm_app'
   def new
   end
   

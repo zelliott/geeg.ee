@@ -30,9 +30,10 @@
   filter: alpha(opacity=$IEValue);
 }
 
-@mixin flat-btn($btn-background-color, $btn-font-color, $btn-height, $btn-width) {
+@mixin flat-btn($btn-background-color, $btn-font-color, $btn-bdr-color, $btn-height, $btn-width) {
     background-color: $btn-background-color;
     color: $btn-font-color;
+    border-bottom: 4px solid $btn-bdr-color;
     font-size: 18px;
     font-weight: 600;
     height: $btn-height;

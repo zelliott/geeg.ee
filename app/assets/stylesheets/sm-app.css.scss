@@ -1,0 +1,52 @@
+@import 'vars';
+@import 'mixins';
+
+/* SM-APP
+   ----------------------------- */
+
+.sm-app {
+    background-color: #fff;
+    #container {
+        width: 500px;
+        .sm-app-form {
+            margin: 200px 50px 0 50px;
+            .sm-logo {
+                text-align: center;
+                margin-bottom: 60px;
+                img {
+                    width: 120px;
+                }
+            }
+            .forgot-title {
+                font-size: 24px;
+                font-weight: 600;
+                color: #666;
+            }
+            .forgot-desc {
+                color: #999;
+                font-weight: 400;
+                margin: 10px 0 20px 0;
+            }
+            input[type=text] {
+                @include input(10px, 400px, #eee, #999, #ddd);
+                margin-bottom: 20px;
+            }
+            input[type=submit] {
+                width: 180px;
+                height: 60px;
+                font-size: 18px;
+            }
+            span {
+                float: right;
+                color: #999;
+                line-height: 60px;
+                width: 220px;
+                text-align: center;
+                a {
+                    padding-bottom: 3px;
+                    border-bottom: 1px solid #999;
+                }
+            }
+        }
+    }
+}

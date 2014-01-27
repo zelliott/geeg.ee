@@ -61,7 +61,7 @@
                 @include flat-input(17px, 600px, #eee, #999, 0px, 0px, 1px, 0px);
             }
             input[type=submit] {
-                @include flat-btn($green, #fff, 75px, 600px)
+                @include flat-btn($green, #fff, $dark-green, 75px, 600px)
             }
             #form-note {
                 width: inherit;

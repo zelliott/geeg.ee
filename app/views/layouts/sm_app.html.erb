@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ggdeck | </title>
+        <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body class="sm-app">       
+        <div id="container">
+            <div class="sm-app-form">
+                <div class="sm-logo">
+                        <%= image_tag "gg-logo-lg-3d.png" %>
+                </div>
+                <%= yield %>
+            </div>
+        </div>
+    </body>
+</html>
