@@ -1,0 +1,19 @@
+<header>
+    <%= link_to image_tag("gg-logo-333.png"), "#", :id => "logo" %>
+    <nav id="header-right-nav">
+        <ul id="header-nav-menu">
+        <% if signed_in? %>
+            <li class="clickable">
+                <%= link_to "Zack", current_user %>
+            </li>
+        <% else %>
+            <li id="signin" class="clickable" onclick="showSignIn();">Sign in</li>
+            <%  if flash[:error] %>
+                <%= javascript_tag do %>
+                    showSignIn();
+                <% end %>
+            <% end %>
+        <% end %>
+        </ul>
+    </nav>
+</header>

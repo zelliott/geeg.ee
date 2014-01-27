@@ -6,13 +6,22 @@
         <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
         <%= csrf_meta_tags %>
     </head>
-    <body class="sm-app">       
-        <div id="container">
-            <div class="sm-app-form">
-                <div class="sm-logo">
-                        <%= image_tag "gg-logo-lg-3d.png" %>
+    <body class="sm-app">
+        <%= render 'layouts/auth' %>
+        <div id="darken-blur-wrapper" onclick="hideSignIn();"></div>
+        <div id="blur-wrapper">
+            <div id="wrapper">
+                <div id="header-bkg">
+                    <%= render 'layouts/sm_header' %>
                 </div>
-                <%= yield %>
+                <div id="container">
+                    <div class="sm-app-form">
+                        <div class="sm-logo">
+                            <%= image_tag "gg-logo-lg-3d.png" %>
+                        </div>
+                        <%= yield %>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
