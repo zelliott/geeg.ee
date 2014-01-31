@@ -49,14 +49,6 @@
             }
         }
         div {
-            .warning-box {
-                div {
-                    padding: 0 20px 20px 20px;
-                }
-                div:first-child {
-                    padding-top: 20px;
-                }
-            }
             input[type=text], input[type=password] {
                 @include flat-input(17px, 600px, #eee, #999, 0px, 0px, 1px, 0px);
             }

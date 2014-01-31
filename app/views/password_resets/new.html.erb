@@ -10,7 +10,7 @@
 </div>
 <%= form_tag password_resets_path, :method => :post do %>
     <%= text_field_tag :email, nil, placeholder: "Email" %>
-    <%= submit_tag "Reset Password", :class => "green-sm-btn" %>
+    <%= submit_tag "Reset Password", :class => "green-sm-btn reset-pass-btn" %>
     <span>
         <%= link_to "Return to login", "#" %>
     </span>

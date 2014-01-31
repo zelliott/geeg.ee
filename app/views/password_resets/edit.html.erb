@@ -1,18 +1,21 @@
+<% if @user.errors.any? %>
+    <div class="warning-box">
+        <% for message in @user.errors.full_messages %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+<% end %>
+
+<div class="forgot-title">
+    Change Password
+</div>
+<div class="forgot-desc">
+    Choose a new password for your account.
+</div>
+
 <%= form_for @user, :url => password_reset_path(params[:id]), :method => :put do |f| %>
 
-	<% if @user.errors.any? %>
-		<div class="errors">
-			<h2>Invalid Form!</h2>
-			<ul>
-				<% for message in @user.errors.full_messages %>
-					<li><%= message %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
-
-    <%= f.password_field :password %>
-    <%= f.label 'Password Confirmation: ' %>
-    <%= f.password_field :password_confirmation %>
-    <%= f.submit 'Update Password' %>
+    <%= f.password_field :password, placeholder: "New Password" %>
+    <%= f.password_field :password_confirmation, placeholder: "Confirm New Password" %>
+    <%= f.submit 'Update Password', :class => "green-sm-btn update-pass-btn" %>
 <% end %>
