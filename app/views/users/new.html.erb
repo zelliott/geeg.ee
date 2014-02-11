@@ -15,7 +15,7 @@
         <div>
             <div class="warning-box">
                 <% if flash[:errors] %>
-                    <% flash[:errors].full_messages.each do |e| %>
+                    <% flash[:errors].each do |e| %>
                         <div><%= e %></div>
                     <% end %>
                 <% end %>
