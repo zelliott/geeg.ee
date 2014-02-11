@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
   
   def create
+    # Cookies::CookieOverflow
     @user = User.new(user_params)
     if @user.save
       sign_in(@user, 1)
@@ -17,6 +18,15 @@ class UsersController < ApplicationController
       flash[:errors] = @user.errors
       redirect_to signup_path
     end
+  end
+  
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    @user = User.find(params[:id])
+    @user.update_attributes(params[:user])
   end
 
   private
