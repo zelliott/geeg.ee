@@ -7,7 +7,10 @@ class User < ActiveRecord::Base
                     format:     { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, length: { minimum: 6, allow_nil: true }, confirmation: true
+  
+  validates :password, presence: true, on: :create
+  validates :password, length: { minimum: 6, maximum: 120 }, allow_blank: true, confirmation: true
+  
   validates :alias, presence: true
     
   def User.new_token
