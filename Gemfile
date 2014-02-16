@@ -55,3 +55,5 @@ gem 'thin'
 
 # Rails engine for static pages
 gem 'high_voltage', '~> 2.1.0'
+
+gem 'wicked'

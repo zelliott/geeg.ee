@@ -2,6 +2,7 @@ App::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :password_resets
+  resources :user_steps
 
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
