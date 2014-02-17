@@ -26,10 +26,12 @@
                 color: #666;
                 margin: 10px 0;
                 padding-left: 10px;
+                i {
+                    margin-right: 12px;
+                }
             }
             .active-step {
                 color: #fff;
-                border-left: 5px solid $blue;
             }
         }
     }
@@ -130,7 +132,7 @@
             padding: 20px 5px 0 5px;
             color: #999;
             line-height: 22px;
-            p {
+            li {
                 margin-bottom: 10px;
             }
         }
