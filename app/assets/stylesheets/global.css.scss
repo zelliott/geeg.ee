@@ -1,5 +1,5 @@
-@import 'vars';
-@import 'mixins';
+@import '_vars';
+@import '_mixins';
 
 /* GLOBAL ELEMENT STYLIZATIONS
    ----------------------------- */
@@ -99,6 +99,10 @@ h6 {
 
 .pointable {
     cursor: default;
+}
+
+.strikethrough {
+    text-decoration: line-through;
 }
 
 /* GLOBAL SELECTOR STYLIZATIONS

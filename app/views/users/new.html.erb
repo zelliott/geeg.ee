@@ -1,36 +1,26 @@
-<div id="signup-content">
-    <div id="signup-steps">
-        <ul>
-            <li class="active-step">Sign up</li>
-            <li>Choose account</li>
-            <li>Select game</li>
-            <li>Create profile</li>
-        </ul>
+<div class="signup-frame">
+    <div class="signup-banner">
+        <%= image_tag "gg-logo-lg-3d.png", :class => "banner-logo" %>
+        <div class="banner-motto">Your professional esports network.</div>
     </div>
-    <div id="signup-frame">
-        <div id="signup-banner">
-            <%= image_tag "gg-logo-lg-3d.png", :id => "banner-logo" %>
-            <div id="banner-motto">Your professional esports network.</div>
-        </div>
-        <div>
-            <div class="warning-box">
-                <% if flash[:errors] %>
-                    <% flash[:errors].each do |e| %>
-                        <div><%= e %></div>
-                    <% end %>
+    <div>
+        <div class="warning-box">
+            <% if flash[:errors] %>
+                <% flash[:errors].each do |e| %>
+                    <div><%= e %></div>
                 <% end %>
-            </div>
-            <%= form_for(@user) do |f| %>
-            <%= f.text_field :name, placeholder: "Full name" %>        
-            <%= f.text_field :alias, placeholder: "Alias" %>
-            <%= f.text_field :email, placeholder: "Email" %>  
-            <%= f.password_field :password, placeholder: "Password" %>  
-            <%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
-            <%= f.submit "Sign up" %>
             <% end %>
-            <div id="form-note">
-                By clicking this button you agree to GGDeck's <%= link_to "Terms and Conditions", page_path(id: 'terms') %>
-            </div>
+        </div>
+        <%= form_for(@user) do |f| %>
+        <%= f.text_field :name, placeholder: "Full name" %>        
+        <%= f.text_field :alias, placeholder: "Alias" %>
+        <%= f.text_field :email, placeholder: "Email" %>  
+        <%= f.password_field :password, placeholder: "Password" %>  
+        <%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
+        <%= f.submit "Sign up" %>
+        <% end %>
+        <div class="form-note">
+            By clicking this button you agree to GGDeck's <%= link_to "Terms and Conditions", page_path(id: 'terms') %>
         </div>
     </div>
 </div>

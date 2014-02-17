@@ -1,5 +1,42 @@
-<%= form_for @user, url: wizard_path do |f| %>
-	<h2>Account Type</h2>
-	<!-- Account Types Here -->
-  <%= f.submit "Continue" %>
-<% end %>
+<div class="selection-frame">
+    <div class="page-header">
+        <div>Choose an account</div>
+        <span class="clickable">Not sure which?</span>
+    </div>
+    <div class="account-types">
+        <div class="player-acc clickable">
+            <div class="account-header">
+                <i class="fa fa-gamepad fa-3x"></i>
+                <div>Player</div>
+            </div>
+            <div class="account-desc">
+                <p>Demonstrate your skills</p>
+                <p>Build a gaming resume</p>
+                <p>Connect with teams</p>
+            </div>
+        </div>
+        <div class="caster-acc clickable">
+            <div class="account-header">
+                <i class="fa fa-microphone fa-3x"></i>
+                <div>Caster</div>
+            </div>
+            <div class="account-desc">
+                <p>Showcase your videos</p>
+                <p>Connect with viewers</p>
+                <p>Discover casting opportunities</p>
+            </div>
+        </div>
+        <div class="org-acc clickable">
+            <div class="account-header">
+                <i class="fa fa-globe fa-3x"></i>
+                <div>Organization</div>
+            </div>
+            <div class="account-desc">
+                <p>Promote your content</p>
+                <p>Understand your audience</p>
+                <p>Connect with gamers</p>
+            </div>
+        </div>
+    </div>
+</div>
+<input class="green-sm-btn user-steps-continue" type="button" value="Continue" />

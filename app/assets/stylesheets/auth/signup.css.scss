@@ -1,5 +1,5 @@
-@import 'vars';
-@import 'mixins';
+@import '_vars';
+@import '_mixins';
 
 /* TALL HEADER
    ----------------------------- */
@@ -10,16 +10,17 @@
     width: 100%;
 }
 
-/* SIGNUP CONTENT
+/* SIGNUP LAYOUT (AS A WHOLE)
    ----------------------------- */
 
-#signup-content {
+.signup-content {
     float: left;
-    margin: -280px 0 60px 0;
+    margin: -280px 0 0px 0; /* Only content tag on the site that doesn't bump the footer 60px. */
     width: $container-width;
-    #signup-steps {
+    .signup-steps {
+        min-width: 130px;
         float: left;
-        margin-top: 280px + 60;
+        margin-top: 340px; /* 280px + 40px */
         ul {
             li {
                 color: #666;
@@ -32,39 +33,127 @@
             }
         }
     }
-    #signup-frame {
-        margin: 0 auto;
-        width: 600px;
-        #signup-banner {
-            text-align: center;
-            margin-bottom: 60px;
-            #banner-logo {
-                width: 120px;
-                margin: 0 240px;
-            }
-            #banner-motto {
-                color: $red;
-                font-size: 30px;
-                margin: 20px 0 0 0;
-            }
+}
+
+/* SIGNUP PAGE (FIRST STEP)
+   ----------------------------- */
+
+.signup-frame {
+    margin: 0 auto 60px auto; /* I add the 60px here so that .signup-content doesn't have margin-bottom 60px on the next page */
+    width: 600px;
+    .signup-banner {
+        text-align: center;
+        margin-bottom: 60px;
+        .banner-logo {
+            width: 120px;
+            margin: 0 240px;
         }
-        div {
-            input[type=text], input[type=password] {
-                @include flat-input(17px, 600px, #eee, #999, 0px, 0px, 1px, 0px);
-            }
-            input[type=submit] {
-                @include flat-btn($green, #fff, $dark-green, 75px, 600px)
-            }
-            #form-note {
-                width: inherit;
-                color: #666;
-                margin-top: 30px;
-                text-align: center;
-                a {
-                    padding-bottom: 3px;
-                    border-bottom: 1px solid #666;
-                }
+        .banner-motto {
+            color: $red;
+            font-size: 30px;
+            margin: 20px 0 0 0;
+        }
+    }
+    div {
+        input[type=text], input[type=password] {
+            @include flat-input(17px, 600px, #eee, #999, 0px, 0px, 1px, 0px);
+        }
+        input[type=submit] {
+            @include flat-btn($green, #fff, $dark-green, 75px, 600px)
+        }
+        .form-note {
+            width: inherit;
+            color: #666;
+            margin-top: 30px;
+            text-align: center;
+            a {
+                padding-bottom: 3px;
+                border-bottom: 1px solid #666;
             }
         }
     }
 }
+
+/* CHOOSE ACCOUNT TYPE
+   ----------------------------- */
+
+.selection-frame {
+    float: left;
+    width: 960px - (260 + 100);
+    padding: 0 50px;
+    .page-header {
+        text-align: center;
+        margin-bottom: 37px;
+        div {
+            font-size: 50px;
+            color: #999;
+        }
+        span {
+            color: #ccc;
+            padding-bottom: 3px;
+            border-bottom: $light-gray-bdr;
+        }
+    }
+    .account-types {
+        width: 600px;
+        > div {
+            float: left;
+            width: 160px;
+            height: 600px;
+            margin: 0 20px;
+            .account-header {
+                border-bottom-width: 10px; 
+                border-bottom-style: solid;
+                text-align: center;
+                font-size: 24px;
+                i {
+                    margin: 20px 0 10px 0;
+                }
+                div {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .player-acc .account-header {
+            color: $dark-red;
+            border-bottom-color: $dark-red;
+        }
+        .caster-acc .account-header {
+            color: $orange;
+            border-bottom-color: $orange;
+        }
+        .org-acc .account-header {
+            color: $orange-yellow;
+            border-bottom-color: $orange-yellow;
+        }
+        .account-desc {
+            padding: 20px 5px 0 5px;
+            color: #999;
+            line-height: 22px;
+            p {
+                margin-bottom: 10px;
+            }
+        }
+        /* This is the CSS style when you choose the account type
+        
+        .player-acc {
+            background-color: $dark-red;
+            .account-header {
+                color: #fff;
+            }
+            .account-desc {
+                color: #fff;
+            }
+        }*/
+    }
+}
+
+.user-steps-continue {
+    margin-top: 600px;
+    width: 130px;   
+    height: 60px;
+    font-size: 18px !important;
+}
+
+/* CHOOSE GAME TYPE
+   ----------------------------- */

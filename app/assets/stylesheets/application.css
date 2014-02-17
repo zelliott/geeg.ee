@@ -10,8 +10,8 @@
  *
  *= require_self
  *= require font-awesome
- *= require vars
- *= require reset
+ *= require _vars
+ *= require _reset
  *= require global
  *= require_tree .
  */
