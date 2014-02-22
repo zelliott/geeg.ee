@@ -1,3 +1,36 @@
-<div id="signup-frame">
-    
+<div class="selection-frame">
+    <div class="page-header">
+        <div>Select your game</div>
+        <span class="clickable">Not sure which?</span>
+    </div>
+    <div class="game-types">
+        <div class="league-acc clickable">
+            <div class="account-header">
+                <i class="fa fa-angle-down fa-3x"></i>
+                <div>LoL</div>
+            </div>
+            <div class="game-pic">
+                <%= image_tag("select-game-artwork/select-game-league.jpg") %>
+            </div>
+        </div>
+        <div class="dota-acc clickable">
+            <div class="account-header">
+                <i class="fa fa-angle-down fa-3x"></i>
+                <div>Dota 2</div>
+            </div>
+            <div class="game-pic">
+                <%= image_tag("select-game-artwork/select-game-dota.jpg") %>
+            </div>
+        </div>
+        <div class="starcraft-acc clickable">
+            <div class="account-header">
+                <i class="fa fa-angle-down fa-3x"></i>
+                <div>Starcraft 2</div>
+            </div>
+            <div class="game-pic">
+                <%= image_tag("select-game-artwork/select-game-starcraft.jpg") %>
+            </div>
+        </div>
+    </div>
 </div>
+<input class="green-sm-btn user-steps-continue" type="button" value="Continue" />

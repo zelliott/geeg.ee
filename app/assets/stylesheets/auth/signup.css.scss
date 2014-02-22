@@ -96,7 +96,7 @@
             border-bottom: $light-gray-bdr;
         }
     }
-    .account-types {
+    .account-types, .game-types {
         width: 600px;
         > div {
             float: left;
@@ -159,3 +159,21 @@
 
 /* CHOOSE GAME TYPE
    ----------------------------- */
+
+.game-types {
+    .league-acc .account-header {
+        color: $green;
+        border-bottom-color: $green;
+    }
+    .dota-acc .account-header {
+        color: $blue;
+        border-bottom-color: $blue;
+    }
+    .starcraft-acc .account-header {
+        color: $purple;
+        border-bottom-color: $purple;
+    }
+    .game-pic {
+        
+    }
+}
