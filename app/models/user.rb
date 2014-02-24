@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, maximum: 120 }, allow_blank: true, confirmation: true
   
   validates :alias, presence: true
+  
+  has_one :social_account
     
   def User.new_token
     SecureRandom.urlsafe_base64
