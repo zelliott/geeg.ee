@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125225051) do
+ActiveRecord::Schema.define(version: 20140224130141) do
+
+  create_table "social_accounts", force: true do |t|
+    t.string  "facebook_url"
+    t.string  "twitter_url"
+    t.string  "stream_url"
+    t.integer "user_id"
+  end
+
+  add_index "social_accounts", ["user_id"], name: "index_social_accounts_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
