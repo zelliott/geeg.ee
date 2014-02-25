@@ -11,6 +11,21 @@
 
   <%= f.label :password_confirmation, "Confirm Password" %>
   <%= f.password_field :password_confirmation %>
+  
+  
+  Social Media
+  <%= f.fields_for :social_account do |social_form| %>
+      <%= social_form.label :facebook %>
+      <%= social_form.text_field :facebook_url %>
+      
+      <%= social_form.label :twitter %>
+      <%= social_form.text_field :twitter_url %>
+      
+      <%= social_form.label :stream %>
+      <%= social_form.text_field :stream_url %>
+  <% end %>
+  
+  
 
   <%= f.submit "Update Profile" %>
 <% end %>

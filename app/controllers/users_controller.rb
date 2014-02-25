@@ -22,6 +22,7 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
+    @social = @user.social_account
   end
   
   def update
@@ -37,6 +38,7 @@ class UsersController < ApplicationController
   private
     
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :alias)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :alias,
+                                 social_account_attributes: [:id, :facebook_url, :twitter_url, :stream_url])
   end
 end

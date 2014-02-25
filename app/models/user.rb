@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
   validates :alias, presence: true
   
   has_one :social_account
+  accepts_nested_attributes_for :social_account
     
   def User.new_token
     SecureRandom.urlsafe_base64
