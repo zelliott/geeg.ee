@@ -44,6 +44,15 @@
                         This is my short little bio.  Here I talk about what I like, my hobbies, things I do in my spare time.  La dee da.
                     </p>
                 </div>
+                
+                
+                <div>
+                  <%= "Facebook:" + @social.facebook_url if @social.facebook_url  %>
+                  <%= "Twitter:" + @social.twitter_url if @social.twitter_url %>
+                  <%= "Stream:" + @social.stream_url if @social.stream_url %>
+                </div>
+                
+                
             </div>
             <div class="main-block">
                 <h3><i class="fa fa-gamepad"></i>Experience<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
