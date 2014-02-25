@@ -1,5 +1,7 @@
 <% flash.each do |key, value| %>
-  <%= content_tag(:div, value, :class => "flash #{key}") %>
+    <div class="warning-box">
+        <%= content_tag(:div, value, :class => "flash #{key}") %>
+    </div>
 <% end %>
 
 <div class="forgot-title">
