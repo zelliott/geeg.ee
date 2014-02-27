@@ -15,3 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery.nested-fields
+
+$(document).ready(function(e) {
+  $('FORM').nestedFields();
+});
