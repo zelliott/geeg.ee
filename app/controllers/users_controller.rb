@@ -39,6 +39,7 @@ class UsersController < ApplicationController
     
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :alias,
-                                 social_account_attributes: [:id, :facebook_url, :twitter_url, :stream_url])
+                                 social_account_attributes: [:id, :facebook_url, :twitter_url, :stream_url],
+                                 videos_attributes: [:id, :url, :_destroy])
   end
 end
