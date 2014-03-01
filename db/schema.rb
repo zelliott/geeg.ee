@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140301063222) do
+ActiveRecord::Schema.define(version: 20140301065710) do
 
   create_table "account_categories", force: true do |t|
     t.integer  "user_id"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20140301063222) do
   end
 
   add_index "account_categories", ["user_id"], name: "index_account_categories_on_user_id"
+
+  create_table "games", force: true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "games", ["user_id"], name: "index_games_on_user_id"
 
   create_table "social_accounts", force: true do |t|
     t.string   "facebook_url"
