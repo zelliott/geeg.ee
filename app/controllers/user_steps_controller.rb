@@ -1,6 +1,6 @@
 class UserStepsController < ApplicationController
   include Wicked::Wizard
-  steps :choose_game, :account_type  
+  steps :account_type, :choose_game
   layout 'signup'
   
   def show
