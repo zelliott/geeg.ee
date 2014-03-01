@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AccountTypeTest < ActiveSupport::TestCase
+class AccountCategoryTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
