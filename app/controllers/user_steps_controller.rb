@@ -5,11 +5,13 @@ class UserStepsController < ApplicationController
   
   def show
     @user = current_user
+    @account = @user.build_account_category unless @user.account_category
     render_wizard
   end
   
   def update
     @user = current_user
+    @user.attributes = params[:user]
     render_wizard @user
   end
   
