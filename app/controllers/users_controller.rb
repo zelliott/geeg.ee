@@ -22,7 +22,11 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
-    @social = @user.social_account
+    if @user.social_account
+      @social = @user.social_account
+    else
+      @social = @user.build_social_account
+    end
   end
   
   def update
