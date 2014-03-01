@@ -21,6 +21,9 @@ class User < ActiveRecord::Base
   
   has_one :account_category
   accepts_nested_attributes_for :account_category
+  
+  has_one :game
+  accepts_nested_attributes_for :game
     
   def User.new_token
     SecureRandom.urlsafe_base64
