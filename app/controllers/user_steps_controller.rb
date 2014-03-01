@@ -12,6 +12,7 @@ class UserStepsController < ApplicationController
   def update
     @user = current_user
     @user.attributes = params[:user]
+    @game = @user.build_game unless @user.game
     render_wizard @user
   end
   
