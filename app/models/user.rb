@@ -18,6 +18,9 @@ class User < ActiveRecord::Base
   
   has_many :videos
   accepts_nested_attributes_for :videos, allow_destroy: true
+  
+  has_one :account_category
+  accepts_nested_attributes_for :account_category
     
   def User.new_token
     SecureRandom.urlsafe_base64
