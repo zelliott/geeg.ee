@@ -120,17 +120,17 @@
             margin-left: 120px; /* This is because there are only 2 account types on the choose account type page */
         }
         .player-acc .account-header {
-            color: $dark-red;
-            border-bottom-color: $dark-red;
+            color: $red;
+            border-bottom-color: $red;
         }
         .caster-acc .account-header {
-            color: $orange;
-            border-bottom-color: $orange;
-        }
-        .org-acc .account-header {
             color: $orange-yellow;
             border-bottom-color: $orange-yellow;
         }
+        /*.org-acc .account-header {
+            color: $orange-yellow;
+            border-bottom-color: $orange-yellow;
+        }*/
         .account-desc {
             padding: 20px 5px 0 5px;
             color: #999;
@@ -142,7 +142,7 @@
         /* This is the CSS style when you choose the account type
         
         .player-acc {
-            background-color: $dark-red;
+            background-color: $red;
             .account-header {
                 color: #fff;
             }
