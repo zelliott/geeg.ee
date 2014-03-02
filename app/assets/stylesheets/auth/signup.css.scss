@@ -116,6 +116,9 @@
                 }
             }
         }
+        .player-acc {
+            margin-left: 120px; /* This is because there are only 2 account types on the choose account type page */
+        }
         .player-acc .account-header {
             color: $dark-red;
             border-bottom-color: $dark-red;

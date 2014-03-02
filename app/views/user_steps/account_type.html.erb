@@ -1,48 +1,50 @@
-<div class="selection-frame">
-    <div class="page-header">
-        <div>Choose an account</div>
-        <span class="clickable tooltip" title="You might fit more than one role here.  Choose your primary role, the account type is less of a strict categorization and more of a soft focus.  You can always change later.">Not sure which?</span>
+<%= form_for current_user, url: wizard_path do |f| %>
+    <div class="selection-frame">
+        <div class="page-header">
+            <div>Choose an account</div>
+            <span class="clickable tooltip" title="You might fit more than one role here.  Choose your primary role, the account type is less of a strict categorization and more of a soft focus.  You can always change later.">Not sure which?</span>
+        </div>
+        <div class="account-types">
+            <div class="player-acc clickable">
+                <div class="account-header">
+                    <i class="fa fa-gamepad fa-3x"></i>
+                    <div>Player</div>
+                </div>
+                <div class="account-desc">
+                    <ul class="fa-ul">
+                      <li><i class="fa-li fa fa-check"></i>Demonstrate your skills</li>
+                      <li><i class="fa-li fa fa-check"></i>Build a gaming resume</li>
+                      <li><i class="fa-li fa fa-check"></i>Connect with teams</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="caster-acc clickable">
+                <div class="account-header">
+                    <i class="fa fa-microphone fa-3x"></i>
+                    <div>Caster</div>
+                </div>
+                <div class="account-desc">
+                    <ul class="fa-ul">
+                      <li><i class="fa-li fa fa-check"></i>Showcase your videos</li>
+                      <li><i class="fa-li fa fa-check"></i>Connect with viewers</li>
+                      <li><i class="fa-li fa fa-check"></i>Discover casting abilities</li>
+                    </ul>
+                </div>
+            </div>
+            <!--<div class="org-acc clickable">
+                <div class="account-header">
+                    <i class="fa fa-globe fa-3x"></i>
+                    <div>Organization</div>
+                </div>
+                <div class="account-desc">
+                    <ul class="fa-ul">
+                      <li><i class="fa-li fa fa-check"></i>Promote your content</li>
+                      <li><i class="fa-li fa fa-check"></i>Understand your audience</li>
+                      <li><i class="fa-li fa fa-check"></i>Connect with gamers</li>
+                    </ul>
+                </div>
+            </div>-->
+        </div>
     </div>
-    <div class="account-types">
-        <div class="player-acc clickable">
-            <div class="account-header">
-                <i class="fa fa-gamepad fa-3x"></i>
-                <div>Player</div>
-            </div>
-            <div class="account-desc">
-                <ul class="fa-ul">
-                  <li><i class="fa-li fa fa-check"></i>Demonstrate your skills</li>
-                  <li><i class="fa-li fa fa-check"></i>Build a gaming resume</li>
-                  <li><i class="fa-li fa fa-check"></i>Connect with teams</li>
-                </ul>
-            </div>
-        </div>
-        <div class="caster-acc clickable">
-            <div class="account-header">
-                <i class="fa fa-microphone fa-3x"></i>
-                <div>Caster</div>
-            </div>
-            <div class="account-desc">
-                <ul class="fa-ul">
-                  <li><i class="fa-li fa fa-check"></i>Showcase your videos</li>
-                  <li><i class="fa-li fa fa-check"></i>Connect with viewers</li>
-                  <li><i class="fa-li fa fa-check"></i>Discover casting abilities</li>
-                </ul>
-            </div>
-        </div>
-        <div class="org-acc clickable">
-            <div class="account-header">
-                <i class="fa fa-globe fa-3x"></i>
-                <div>Organization</div>
-            </div>
-            <div class="account-desc">
-                <ul class="fa-ul">
-                  <li><i class="fa-li fa fa-check"></i>Promote your content</li>
-                  <li><i class="fa-li fa fa-check"></i>Understand your audience</li>
-                  <li><i class="fa-li fa fa-check"></i>Connect with gamers</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<input class="green-sm-btn user-steps-continue" type="button" value="Continue" />
+    <%= f.submit "Continue", :class => "green-sm-btn user-steps-continue" %>
+<% end %>
