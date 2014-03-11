@@ -160,6 +160,10 @@
     font-size: 18px !important;
 }
 
+input[type=radio] {
+    display: none;  /* Hide radio buttons */
+}
+
 /* CHOOSE GAME TYPE
    ----------------------------- */
 

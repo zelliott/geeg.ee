@@ -46,5 +46,7 @@
             </div>-->
         </div>
     </div>
+    <%= f.radio_button :name, 'player', :checked => true %>
+    <%= f.radio_button :name, 'caster' %>
     <%= f.submit "Continue", :class => "green-sm-btn user-steps-continue" %>
 <% end %>

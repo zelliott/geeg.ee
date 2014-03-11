@@ -18,6 +18,6 @@ $(document).ready(function() {
         checked = $checkbox.is(":checked")
     
         $icon.toggleClass('fa-check-square-o', checked)
-            .toggleClass('fa-square-o', !checked)
+             .toggleClass('fa-square-o', !checked)
     });
 });
