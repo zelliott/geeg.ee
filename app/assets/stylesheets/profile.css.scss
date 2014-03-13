@@ -39,25 +39,28 @@
         color: #fff;
         > div {
             float: left;
+            .verified {
+                z-index: 10;
+                position: absolute;
+                margin: -40px 0 0 85px; // Eyeballed in order to move it w/ respect to margins
+                padding: 10px 10px;
+                background-color: $blue;
+                font-weight: 600;
+                @include border-radius(20px);
+                font-size: 14px;
+            }
             > div {
                 margin: 0 0 5px 30px;
                 h1 {
                     display: inline-table;
+                    margin-right: 10px;
                 }
-                .verified {
-                    display: inline-table;
-                    margin: -6px 0 0 20px;
-                    padding: 5px 10px;
-                    background-color: $blue;
-                    font-weight: 600;
-                    @include border-radius(20px);
-                    font-size: 14px;
+                .nickname {
+                    color: #ccc;
+                    font-weight: 400;
                 }
                 h2 {
                     color: #999;
-                }
-                .status {
-                    /* No team flag or icon yet */
                 }
             }
         } 
@@ -68,44 +71,45 @@
         margin: 60px 0 0 0;
         .main-block {
             width: inherit;
-            background-color: #fff;
-            min-height: 300px;
-            i:not(.float-r) {
-                margin-right: 12px;
+            height: 300px;
+            > i {
+                width: 50px;
+                float: left;
+                display: block;
+                color: #999;
+                line-height: 45px;
+                font-size: 24px;
             }
-            i.fa-caret-down {  // I think it looks better 2px down and slightly faded
-                padding: 2px 12px;
-                color: #ccc;
-            }
-            div {
-                display: inline-table;
-                position: relative;
-                width: ($profile-width - 1) / 2; // If I don't subtract 1, Safari doesn't fit stuff in the margins
-                ul {
-                    li {
-                        padding: 12px;
-                        background-color: #f7f7f7;
-                        b {
-                            color: #333;
-                        }
-                        span {
-                            color: #333;
-                            float: right;
-                        }
+            > div {
+                color: #333;
+                width: 620px;
+                float: left;
+                background-color: #fff;
+                height: inherit;
+                i.fa-caret-down {  // I think it looks better 2px down and slightly faded
+                    padding: 2px 12px;
+                    color: #ccc;
+                }
+                .exp-chunk {
+                    padding: 0 12px;
+                    margin-bottom: 12px;
+                    .exp-title {
+                        font-weight: 600;
+                        font-size: 16px;
+                        display: inline;
+                        margin-bottom: 5px;
+                    }
+                    .exp-time-frame {
+                        float: right;
+                        color: #999;
+                    }
+                    .exp-position {
+                    
+                    }
+                    .exp-location {
+                        
                     }
                 }
-                p {
-                    color: #666;
-                    padding: 12px;
-                    font-style: italic;
-                }
-            }
-            .main-block-left {
-                border-right: $light-gray-bdr;
-            }
-            .main-block-right {
-                margin-top: -3px;
-                margin-left: -5px;
             }
         }
         .main-block:first-child h3 {

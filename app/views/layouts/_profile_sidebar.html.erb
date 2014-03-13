@@ -16,6 +16,19 @@
                 <input type="text" readonly="readonly" value="http://ggdeck.com/u/zackelliott" />
                 <i class="fa fa-copy clickable"></i>
             </div>
+            <div id="quick-info" class="sidebar-block">
+                <h5>Info</h5>
+            </div>
+            <div id="social-links" class="sidebar-block">
+                <h5>Social Links</h5>
+                <% if @social %>
+                  <div>
+                    <%= "Facebook:" + @social.facebook_url if @social.facebook_url  %>
+                    <%= "Twitter:" + @social.twitter_url if @social.twitter_url %>
+                    <%= "Stream:" + @social.stream_url if @social.stream_url %>
+                  </div>
+                <% end %>
+            </div>
             <div id="related-players" class="sidebar-block">
                 <h5>Related Players</h5>
                 <ul>
@@ -30,9 +43,6 @@
                         <small>Status of player</small>
                     </li>
                 </ul>
-            </div>
-            <div id="statistics" class="sidebar-block">
-                <h5>Profile Activity</h5>
             </div>
         </div>
     </div>

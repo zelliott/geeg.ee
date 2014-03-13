@@ -5,63 +5,61 @@
         <div id="quick-info">
             <div>
                 <%= image_tag "white-square.png", :class => "circle" %>
+                <i class="fa fa-check verified"></i>
             </div>
             <div>
                 <div>
                     <h1><%= @user.name %></h1>
-                    <div class="verified"><i class="fa fa-check"></i> Verified</div>
+                    <h1 class="nickname">(HubridNoxx)</h1>
                 </div>
                 <div>
-                    <h2>HubridNoxx.193</h2>
-                </div>
-                <div>
-                    <div class="status"></div>
+                    <h2>Position 3 for Natus Vincere</h2>
                 </div>
                 
             </div>
         </div>
         <div id="main-info">
             <div class="main-block">
-                <h3><i class="fa fa-male"></i>About<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
-                <div class="main-block-left">
-                    <ul>
-                        <li>
-                            <b>Age</b>
-                            <span>19</span>
-                        </li>
-                        <li>
-                            <b>Location</b>
-                            <span>Seattle</span>
-                        </li>
-                        <li>
-                            <b>Language</b>
-                            <span>English</span>
-                        </li>
-                    </ul>
+                <i class="fa fa-lg fa-gamepad clickable"></i>
+                <div>
+                    <h3>Experience<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
+                    <div class="exp-chunk">
+                        <div class="exp-title">Natus Vincere</div>
+                        <span class="exp-time-frame">2011 - 2013</span>
+                        <div class="exp-position">Position 3 Player</div>
+                        <div class="exp-location">Seattle, WA</div>
+                    </div>
+                    <div class="exp-chunk">
+                        <div class="exp-title">Some other random team</div>
+                        <span class="exp-time-frame">2010 - 2011</span>
+                        <div class="exp-position">Position 1 Player</div>
+                        <div class="exp-location">Redmond, WA</div>
+                    </div>
                 </div>
-                <div class="main-block-right">
-                    <p>
-                        This is my short little bio.  Here I talk about what I like, my hobbies, things I do in my spare time.  La dee da.
-                    </p>
+            </div>
+            <div class="main-block">
+                <i class="fa fa-lg fa-star clickable"></i>
+                <div>
+                    <h3>Recognition<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
                 </div>
-                
-                <% if @social %>
-                  <div>
-                    <%= "Facebook:" + @social.facebook_url if @social.facebook_url  %>
-                    <%= "Twitter:" + @social.twitter_url if @social.twitter_url %>
-                    <%= "Stream:" + @social.stream_url if @social.stream_url %>
-                  </div>
-                <% end %>
-                
             </div>
             <div class="main-block">
-                <h3><i class="fa fa-gamepad"></i>Experience<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
+                <i class="fa fa-lg fa-bullhorn clickable"></i>
+                <div>
+                    <h3>Press<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
+                </div>
             </div>
             <div class="main-block">
-                <h3><i class="fa fa-bar-chart-o"></i>Statistics<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
+                <i class="fa fa-lg fa-bar-chart-o clickable"></i>
+                <div>
+                    <h3>Statistics<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
+                </div>
             </div>
             <div class="main-block">
-                <h3><i class="fa fa-quote-left"></i>Recommendations<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
+                <i class="fa fa-lg fa-quote-left clickable"></i>
+                <div>
+                    <h3>Recommendations<i class="fa fa-caret-down fa-lg float-r clickable"></i></h3>
+                </div>
             </div>
         </div>
     </div>
