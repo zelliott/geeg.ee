@@ -11,13 +11,19 @@ class UserStepsController < ApplicationController
   
   def update
     @user = current_user
-    @user.attributes = params[:user]
+    @user.update_attributes(user_params)
     @game = @user.build_game unless @user.game
     render_wizard @user
   end
   
   private
-  def redirect_to_finish_wizard
-    redirect_to @user, notice: "Thanks for signing up."
+  def finish_wizard_path
+    user_path(current_user)
   end
+  
+  def user_params
+    params.require(:user).permit(account_category_attributes: [:id, :category],
+                                 game_attributes: [:id, :name])
+  end
+  
 end
