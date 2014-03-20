@@ -18,15 +18,23 @@
             </div>
             <div id="quick-info" class="sidebar-block">
                 <h5>Info</h5>
+                <ul>
+                    <li>Age<span>18</span></li>
+                    <li>Location<span>Seattle, WA</span></li>
+                    <li>Languages<span>English, Spanish</span></li>
+                </ul>
             </div>
             <div id="social-links" class="sidebar-block">
                 <h5>Social Links</h5>
+                <ul>
+                    <li>Facebook<a href="">HubridNoxx's Page</a></li>
+                    <li>Twitter<a href="">@hubridnoxx</a></li>
+                    <li>Stream<a href="">HubridNoxx's Channel</a></li>
+                </ul>
                 <% if @social %>
-                  <div>
                     <%= "Facebook:" + @social.facebook_url if @social.facebook_url  %>
                     <%= "Twitter:" + @social.twitter_url if @social.twitter_url %>
                     <%= "Stream:" + @social.stream_url if @social.stream_url %>
-                  </div>
                 <% end %>
             </div>
             <div id="related-players" class="sidebar-block">

@@ -90,24 +90,26 @@
                     padding: 2px 12px;
                     color: #ccc;
                 }
-                .exp-chunk {
+                .main-chunk {
                     padding: 0 12px;
                     margin-bottom: 12px;
-                    .exp-title {
+                    .chunk-title {
                         font-weight: 600;
                         font-size: 16px;
                         display: inline;
                         margin-bottom: 5px;
                     }
-                    .exp-time-frame {
+                    .chunk-time {
                         float: right;
                         color: #999;
                     }
-                    .exp-position {
-                    
-                    }
-                    .exp-location {
-                        
+                    .chunk-sub-info {
+                        margin: 5px 0 0 12px;
+                        color: #999;
+                        i {
+                            color: #bbb; // Also looks better slightly faded
+                            margin-right: 8px;
+                        }
                     }
                 }
             }
@@ -148,14 +150,25 @@
         width: inherit;
         .sidebar-block {
             display: block;
+            float: left;
+            width: inherit;
             margin-bottom: 30px;
             h5 {
                 float: left;
                 width: 100%;
             }
+            ul {
+                float: left;
+                li {
+                    float: left;
+                    width: 100%;
+                }
+                li:last-child {
+                    margin-bottom: 0px !important;
+                }
+            }
         }
         #permalink {
-            float: left;
             @include border-radius(5px);
             overflow: hidden;
             input[type=text] {
@@ -172,13 +185,33 @@
                 color: #999;
             }
         }
-        #related-players {
-            float: left;
+        #quick-info {
             ul {
-                float: left;
                 li {
-                    float: left;
-                    width: $sidebar-width;
+                    margin-bottom: 10px;
+                    color: #999;
+                    span {
+                        float: right;
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+        #social-links {
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    color: #999;
+                    a {
+                        color: #ccc;
+                        float: right;
+                    }
+                }
+            }
+        }
+        #related-players {
+            ul {
+                li {
                     margin: 0 0 20px 0;
                     img, a, small {
                         float: left;
