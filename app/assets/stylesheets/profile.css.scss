@@ -71,7 +71,6 @@
         margin: 60px 0 0 0;
         .main-block {
             width: inherit;
-            height: 300px;
             > i {
                 width: 50px;
                 float: left;
@@ -92,7 +91,7 @@
                 }
                 .main-chunk {
                     padding: 0 12px;
-                    margin-bottom: 12px;
+                    margin: 12px 0 30px 0; // Spacing between each chunk
                     .chunk-title {
                         font-weight: 600;
                         font-size: 16px;
@@ -111,6 +110,15 @@
                             margin-right: 8px;
                         }
                     }
+                    .chunk-quote {
+                        blockquote {
+                            margin: -20px 0 0 26px; // A little hack to preserve the indent of the blockquote
+                            max-width: 400px; // Completely arbitrary
+                        }
+                    }
+                }
+                .main-chunk:last-child {
+                    margin-bottom: 60px; // Makes it look cleaner with more whitespace at the bottom of each section
                 }
             }
         }

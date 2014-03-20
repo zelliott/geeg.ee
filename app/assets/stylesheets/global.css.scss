@@ -59,7 +59,6 @@ h3 {
     border-bottom: $light-gray-bdr;
     width: 608px;  // Take 620 and subtract 12px of padding
     padding: 12px 0 12px 12px;
-    margin-bottom: 12px;
 }
 
 /* Footer section headers */
@@ -104,6 +103,10 @@ h6 {
 
 .strikethrough {
     text-decoration: line-through;
+}
+
+.italic {
+    font-style: italic;
 }
 
 /* GLOBAL SELECTOR STYLIZATIONS
