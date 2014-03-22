@@ -14,6 +14,7 @@
 //= require retina-1.1.0.min
 //= require jquery_ujs
 //= require turbolinks
+//= require _global
 //= require_tree .
 //= require jquery.nested-fields
 

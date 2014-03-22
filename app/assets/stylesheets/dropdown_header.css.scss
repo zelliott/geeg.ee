@@ -64,13 +64,12 @@
                 margin-right: 12px;
             }
     }
-}
-
-#hide-dropdown-header {
-    position: absolute;
-    top: -5px;
-    right: 0;
-    font-weight: 600;
-    font-size: 24px;
-    color: #bbb;
+    i.fa-times {
+        position: absolute;
+        top: -5px;
+        right: 0;
+        font-weight: 600;
+        font-size: 24px;
+        color: #bbb;
+    }
 }

@@ -89,36 +89,40 @@
                     padding: 2px 12px;
                     color: #ccc;
                 }
-                .main-chunk {
-                    padding: 0 12px;
-                    margin: 12px 0 30px 0; // Spacing between each chunk
-                    .chunk-title {
-                        font-weight: 600;
-                        font-size: 16px;
-                        display: inline;
-                        margin-bottom: 5px;
-                    }
-                    .chunk-time {
-                        float: right;
-                        color: #999;
-                    }
-                    .chunk-sub-info {
-                        margin: 5px 0 0 12px;
-                        color: #999;
-                        i {
-                            color: #bbb; // Also looks better slightly faded
-                            margin-right: 8px;
+                .collapsable-block {
+                    margin-top: 12px;
+                    overflow: hidden;
+                    .main-chunk {
+                        padding: 0 12px;
+                        margin: 0px 0 30px 0; // Spacing between each chunk
+                        .chunk-title {
+                            font-weight: 600;
+                            font-size: 16px;
+                            display: inline;
+                            margin-bottom: 5px;
+                        }
+                        .chunk-time {
+                            float: right;
+                            color: #999;
+                        }
+                        .chunk-sub-info {
+                            margin: 5px 0 0 12px;
+                            color: #999;
+                            i {
+                                color: #bbb; // Also looks better slightly faded
+                                margin-right: 8px;
+                            }
+                        }
+                        .chunk-quote {
+                            blockquote {
+                                margin: -20px 0 0 26px; // A little hack to preserve the indent of the blockquote
+                                max-width: 400px; // Completely arbitrary
+                            }
                         }
                     }
-                    .chunk-quote {
-                        blockquote {
-                            margin: -20px 0 0 26px; // A little hack to preserve the indent of the blockquote
-                            max-width: 400px; // Completely arbitrary
-                        }
+                    .main-chunk:last-child {
+                        margin-bottom: 60px; // Makes it look cleaner with more whitespace at the bottom of each section
                     }
-                }
-                .main-chunk:last-child {
-                    margin-bottom: 60px; // Makes it look cleaner with more whitespace at the bottom of each section
                 }
             }
         }
@@ -138,7 +142,7 @@
         #follow-region {
             > div {
                 float: left;
-                margin-right: 16px;
+                margin-right: 14px;
                 i {
                     margin-right: 12px;
                 }
