@@ -7,7 +7,7 @@
         <%= form_for(:session, url: sessions_path) do |f| %>
             <%= f.text_field :email, :placeholder => "Email" %>
             <%= f.password_field :password, :placeholder => "Password" %>
-			
+
 			<div id="auth-remember-section">
                 <label>
                     <%= f.check_box :remember_me %>
@@ -17,8 +17,8 @@
             <%= f.submit "Sign in", :class => "green-sm-btn" %>
         <% end %>
         <span>
-            <%= link_to "Create an account", "#" %><%= link_to "Forgot password?", "#" %>
+            <%= link_to "Create an account", "/signup" %><%= link_to "Forgot password?", "#" %>
         </span>
     </div>
-    
+
 </div>
